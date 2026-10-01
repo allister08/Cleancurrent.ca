@@ -1,32 +1,662 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Clean Current — Propeller Cleaning & Polishing, Halifax</title><meta name="description" content="Clean Current is a Halifax-based underwater vessel maintenance company focused on propeller cleaning and polishing. Contact founders Allister Roy and Brent Steeves."><meta name="theme-color" content="#132c35"><link rel="preload" as="image" href="/assets/halifax-harbour.svg">
-<style>
-:root{--navy:#132c35;--paper:#f5f3ed;--rust:#ac5437;--muted:#586565;--line:#d2d6ce}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{isolation:isolate;margin:0;background:#173743;color:var(--navy);font-family:Arial,Helvetica,sans-serif;line-height:1.6}a{color:inherit}button{font:inherit}a:focus-visible,button:focus-visible{outline:3px solid #be7153;outline-offset:5px}
-.backdrop{position:fixed;inset:0;z-index:-1;background:linear-gradient(#102b3540,#102b3570),url('/assets/halifax-harbour.svg') center/cover no-repeat}
-.skip{position:fixed;top:-80px;left:20px;z-index:20;background:white;padding:12px}.skip:focus{top:12px}
-.masthead{max-width:1200px;margin:auto;padding:34px 32px;display:flex;justify-content:space-between;align-items:center;color:white}.brand{display:flex;gap:12px;align-items:center;text-decoration:none;font-size:20px;font-weight:700;letter-spacing:-.6px}.brand svg{width:36px;height:36px}.place{font-size:11px;letter-spacing:.16em;text-transform:uppercase}
-.page{width:min(1120px,calc(100% - 64px));margin:12px auto 64px;background:var(--paper);box-shadow:0 25px 90px #001b3650}
-.nav{position:sticky;top:0;z-index:5;background:var(--paper);padding:18px 42px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:24px}.nav-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase}.nav-links{display:flex;gap:28px}.nav a{text-decoration:none;font-size:12px}.nav a:hover{color:var(--rust)}
-.hero{display:grid;grid-template-columns:1.45fr 1fr;min-height:570px}.hero-copy{padding:64px 52px 46px;display:flex;flex-direction:column;align-items:flex-start}.kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 30px;color:var(--rust);font-weight:700}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(42px,5.2vw,66px);font-weight:500;letter-spacing:-.055em;line-height:1.04;margin-bottom:26px}h1 span{color:var(--rust)}.hero-copy>p:not(.kicker){font-size:16px;max-width:370px;color:var(--muted)}.cta{display:inline-flex;align-items:center;justify-content:space-between;gap:38px;background:var(--navy);color:white;padding:14px 20px;text-decoration:none;font-size:12px;border:0;cursor:pointer}.cta:hover{background:#28505b}.hero .cta{margin-top:14px}.hero-foot{margin-top:auto;padding-top:42px;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
-.harbour{margin:24px 24px 24px 0;position:relative;background:linear-gradient(0deg,#112f3570,transparent 45%),url('/assets/halifax-harbour.svg') 67% center/cover no-repeat;min-height:330px}.harbour figcaption{position:absolute;bottom:22px;left:22px;right:22px;color:white;font-size:10px;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between}
-.section{padding:58px 52px;scroll-margin-top:0}.section-label{display:flex;gap:18px;align-items:center;font-size:10px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:32px}.section-label:before{content:"";width:26px;height:2px;background:var(--rust)}h2{font-size:clamp(30px,4vw,44px);font-weight:500;line-height:1.15;letter-spacing:-.035em;margin-bottom:24px}
-.services{border-top:1px solid var(--line)}.service-row{display:grid;grid-template-columns:44px 1fr 1fr;gap:24px;border-top:1px solid var(--line);padding:28px 0}.service-row:last-child{padding-bottom:0}.service-no{font-size:11px;color:var(--rust);padding-top:5px}.service-row h3{font-size:25px;letter-spacing:-.035em;font-weight:500;margin:0}.service-row p{font-size:14px;color:var(--muted);margin:0}
-.about{background:var(--navy);color:var(--paper);display:grid;grid-template-columns:1fr 1fr;gap:60px}.about .section-label{color:#d6c3ab}.about h2{margin:0}.about p{font-size:17px;color:#d1dedc;margin:46px 0 0}.about .section-label:before{background:#c98364}
-.founders{border-bottom:1px solid var(--line)}.founder-intro{max-width:580px;font-size:15px;color:var(--muted);margin-bottom:36px}.people{display:grid;grid-template-columns:1fr 1fr;gap:52px}.person{border-top:1px solid var(--line);padding-top:24px}.role{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--rust);margin:0 0 9px}.person h3{font-size:30px;font-weight:500;letter-spacing:-.035em;margin-bottom:15px}.email{font-size:15px;overflow-wrap:anywhere;text-underline-offset:5px}.copy{display:block;background:none;border:0;border-bottom:1px solid currentColor;color:var(--muted);font-size:11px;padding:0 0 3px;margin-top:22px;cursor:pointer}.copy:hover{color:var(--rust)}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact h2{max-width:350px}.contact-intro{font-size:14px;color:var(--muted);max-width:340px}.enquiry{border-left:1px solid var(--line);padding-left:40px}.enquiry>p{font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px}.enquiry ul{padding-left:18px;color:var(--muted);font-size:14px;margin-bottom:28px}.contact .email{font-size:19px}.contact-actions{display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin-top:20px}.contact-actions a{font-size:11px;text-underline-offset:4px}.contact-actions .cta{font-size:12px}#copy-status{font-size:12px;color:var(--muted);margin:20px 0 0;min-height:20px}
-.footer{padding:24px 52px;background:#e9e9e1;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:10px;color:var(--muted)}.footer a{text-underline-offset:3px}.footer-brand{font-weight:700;color:var(--navy)}
-@media(max-width:800px){.hero{grid-template-columns:1.2fr 1fr}.hero-copy{padding:44px 32px}.section{padding:44px 32px}.nav{padding:18px 32px}.nav-label{display:none}.nav-links{width:100%;justify-content:space-between}.about,.contact{gap:32px}.enquiry{padding-left:26px}.footer{padding:24px 32px}.people{gap:30px}}
-@media(max-width:600px){.masthead{padding:24px 20px}.brand{font-size:18px}.place{font-size:9px;letter-spacing:.07em}.page{width:calc(100% - 28px);margin:4px auto 28px}.nav{padding:17px 24px}.nav-links{gap:12px}.nav a{font-size:11px}.hero{display:block}.hero-copy{padding:40px 26px 32px}h1{font-size:48px}.hero-foot{padding-top:30px}.harbour{margin:0 18px 18px;height:240px;min-height:0;background-position:center 65%}.section{padding:38px 26px}.section-label{margin-bottom:26px}.service-row{grid-template-columns:26px 1fr;gap:14px}.service-row p{grid-column:2}.service-row h3{font-size:23px}.about,.contact,.people{grid-template-columns:1fr;gap:30px}.about p{margin:0}.enquiry{padding:26px 0 0;border-left:0;border-top:1px solid var(--line)}.footer{padding:22px 26px}.backdrop{background-position:60% center}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style></head><body><div class="backdrop" aria-hidden="true"></div><a class="skip" href="#main">Skip to content</a>
-<header class="masthead"><a class="brand" href="#main"><svg aria-hidden="true" viewBox="0 0 36 36" fill="none"><path d="M4 12c7-7 14 7 28 0M4 20c7-7 14 7 28 0M4 28c7-7 14 7 28 0" stroke="currentColor" stroke-width="2.2"/></svg>Clean Current</a><span class="place">Halifax, Nova Scotia</span></header>
-<main class="page" id="main"><nav class="nav" aria-label="Main navigation"><span class="nav-label">Underwater vessel maintenance</span><div class="nav-links"><a href="#services">Services</a><a href="#about">About</a><a href="#founders">Founders</a><a href="#contact">Contact</a></div></nav>
-<section class="hero" aria-labelledby="title"><div class="hero-copy"><p class="kicker">Clean Current / Halifax</p><h1 id="title">Underwater<br>propeller cleaning<br><span>&amp; polishing.</span></h1><p>We’re a Halifax-based company focused on propeller care. Speak directly with Allister or Brent about your vessel and the work you need.</p><a class="cta" href="#contact">Enquire about a service <span aria-hidden="true">↗</span></a><div class="hero-foot">Propeller cleaning &nbsp; / &nbsp; Propeller polishing</div></div><figure class="harbour"><figcaption><span>Our home port</span><span>Halifax Harbour</span></figcaption></figure></section>
-<section class="section services" id="services" aria-labelledby="services-title"><div class="section-label">Services</div><h2 id="services-title">Propeller care is our focus.</h2><article class="service-row"><span class="service-no" aria-hidden="true">01</span><h3>Propeller cleaning</h3><p>Underwater cleaning for your vessel’s propeller. Send us the vessel details and its location so we can discuss the work required.</p></article><article class="service-row"><span class="service-no" aria-hidden="true">02</span><h3>Propeller polishing</h3><p>Polishing as part of your propeller maintenance. Get in touch with the propeller details and the timing you have in mind.</p></article></section>
-<section class="section about" id="about" aria-labelledby="about-title"><div><div class="section-label">About Clean Current</div><h2 id="about-title">Based in Halifax.<br>Focused below<br>the waterline.</h2></div><p>Clean Current was founded by Allister Roy and Brent Steeves. Our business centres on underwater vessel maintenance, with a specific focus on propeller cleaning and polishing.</p></section>
-<section class="section founders" id="founders" aria-labelledby="founders-title"><div class="section-label">Founders</div><h2 id="founders-title">Get in touch with us directly.</h2><p class="founder-intro">For service enquiries or questions about Clean Current, contact either of our founders.</p><div class="people"><article class="person"><p class="role">Co-founder</p><h3>Allister Roy</h3><a class="email" href="mailto:Aroy@cleancurrent.ca">Aroy@cleancurrent.ca</a><button class="copy" data-email="Aroy@cleancurrent.ca" type="button">Copy email address</button></article><article class="person"><p class="role">Co-founder</p><h3>Brent Steeves</h3><a class="email" href="mailto:Bsteeves@cleancurrent.ca">Bsteeves@cleancurrent.ca</a><button class="copy" data-email="Bsteeves@cleancurrent.ca" type="button">Copy email address</button></article></div><p id="founder-status" role="status" aria-live="polite"></p></section>
-<section class="section contact" id="contact" aria-labelledby="contact-title"><div><div class="section-label">Service enquiries</div><h2 id="contact-title">Tell us about<br>your vessel.</h2><p class="contact-intro">Email Allister to discuss cleaning or polishing. You can also contact Brent using the details above.</p><a class="email" href="mailto:Aroy@cleancurrent.ca">Aroy@cleancurrent.ca</a><div class="contact-actions"><button class="cta" id="copy-email" data-email="Aroy@cleancurrent.ca" type="button">Copy email address <span aria-hidden="true">↗</span></button><a href="mailto:Aroy@cleancurrent.ca?subject=Vessel%20maintenance%20enquiry">Open email app</a></div><p id="copy-status" role="status" aria-live="polite"></p></div><div class="enquiry"><p>Helpful details to include</p><ul><li>Vessel name and type</li><li>Current location</li><li>Cleaning or polishing required</li><li>Your preferred timing</li></ul><p class="contact-intro" style="font-size:14px;letter-spacing:0;text-transform:none">Photos or propeller specifications are helpful if you have them.</p></div></section>
-<footer class="footer"><span><span class="footer-brand">Clean Current</span> &nbsp; © <span id="year">2026</span> &nbsp; Halifax, NS</span><span>Halifax photo: <a href="https://commons.wikimedia.org/wiki/File:Halifax_skyline.jpg" target="_blank" rel="noopener">Quintin Soloviev</a> / <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a> · Cropped</span></footer></main>
-<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('[data-email]').forEach(button=>button.addEventListener('click',async()=>{const email=button.dataset.email;const status=document.getElementById(button.id==='copy-email'?'copy-status':'founder-status');try{await navigator.clipboard.writeText(email);button.textContent='Email copied ✓';status.textContent=email+' copied. Paste it into a new email.';}catch(error){const link=button.closest('article,section').querySelector('.email');if(link){const range=document.createRange();range.selectNodeContents(link);const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);}status.textContent='Copy '+email+' and paste it into your preferred email service.';}}));</script>
-</body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Clean Current — Underwater Vessel Maintenance, Halifax</title>
+  <meta name="description" content="Clean Current is a Halifax-based underwater vessel maintenance company focused on propeller cleaning and polishing.">
+  <meta name="theme-color" content="#10171a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/assets/halifax-harbour.svg">
+
+  <style>
+    :root{
+      --ink:#10171a;
+      --ink-2:#172126;
+      --slate:#25343a;
+      --fog:#dfe5e2;
+      --paper:#f3f1ea;
+      --paper-2:#e8e6dd;
+      --accent:#df5e35;
+      --line:rgba(16,23,26,.18);
+      --line-light:rgba(255,255,255,.18);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:84px}
+    body{
+      margin:0;
+      background:var(--ink);
+      color:var(--ink);
+      font-family:"Manrope",sans-serif;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    a{color:inherit}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+    .skip{position:fixed;left:18px;top:-80px;z-index:50;background:#fff;padding:10px 14px}
+    .skip:focus{top:18px}
+
+    .topbar{
+      height:78px;
+      padding:0 4vw;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      color:#fff;
+      background:var(--ink);
+      border-bottom:1px solid var(--line-light);
+      position:relative;
+      z-index:10;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      font-size:15px;
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+    .brand-mark{
+      width:28px;
+      height:28px;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(255,255,255,.38);
+      border-radius:50%;
+      font-size:11px;
+      color:var(--accent);
+    }
+    .top-meta{
+      display:flex;
+      gap:36px;
+      align-items:center;
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.15em;
+      color:#aeb9bc;
+    }
+    .top-meta a{text-decoration:none;color:#fff}
+    .top-meta a:hover{color:var(--accent)}
+
+    .hero{
+      min-height:calc(100vh - 78px);
+      display:grid;
+      grid-template-columns:minmax(0,1.15fr) minmax(420px,.85fr);
+      background:var(--ink);
+      color:#fff;
+      overflow:hidden;
+    }
+    .hero-copy{
+      padding:7vw 5vw 4vw;
+      display:flex;
+      flex-direction:column;
+      position:relative;
+      z-index:2;
+    }
+    .eyebrow{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin:0 0 8vh;
+      color:#aeb9bc;
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-weight:600;
+    }
+    .eyebrow:before{
+      content:"";
+      width:42px;
+      height:1px;
+      background:var(--accent);
+    }
+
+    h1,h2,h3,p{margin-top:0}
+    h1{
+      margin:0;
+      max-width:720px;
+      font-family:"Instrument Serif",serif;
+      font-size:clamp(72px,9vw,150px);
+      line-height:.78;
+      letter-spacing:-.055em;
+      font-weight:400;
+    }
+    h1 em{
+      display:block;
+      margin-left:11%;
+      color:var(--accent);
+      font-weight:400;
+    }
+
+    .hero-lower{
+      margin-top:auto;
+      padding-top:7vh;
+      display:grid;
+      grid-template-columns:minmax(180px,320px) 1fr;
+      gap:44px;
+      align-items:end;
+    }
+    .hero-intro{
+      margin:0;
+      color:#c6ced0;
+      font-size:14px;
+      max-width:330px;
+    }
+    .hero-action{
+      justify-self:end;
+      display:inline-flex;
+      align-items:center;
+      gap:22px;
+      padding-bottom:5px;
+      text-decoration:none;
+      border-bottom:1px solid rgba(255,255,255,.6);
+      text-transform:uppercase;
+      font-size:10px;
+      letter-spacing:.14em;
+    }
+    .hero-action span{color:var(--accent);font-size:17px}
+    .hero-action:hover{border-color:var(--accent)}
+
+    .hero-image{
+      position:relative;
+      margin:0;
+      min-height:620px;
+      background:
+        linear-gradient(180deg,rgba(16,23,26,.04),rgba(16,23,26,.5)),
+        url("/assets/halifax-harbour.svg") 63% center/cover no-repeat;
+    }
+    .hero-image:before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0;
+      bottom:0;
+      width:1px;
+      background:var(--line-light);
+    }
+    .image-label{
+      position:absolute;
+      left:24px;
+      bottom:24px;
+      right:24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      color:#fff;
+      font-size:9px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+    .image-index{
+      position:absolute;
+      top:28px;
+      right:24px;
+      width:76px;
+      height:76px;
+      border:1px solid rgba(255,255,255,.48);
+      display:grid;
+      place-items:center;
+      font-size:11px;
+      letter-spacing:.12em;
+    }
+
+    .technical-strip{
+      background:var(--paper);
+      border-bottom:1px solid var(--line);
+      display:grid;
+      grid-template-columns:1.4fr 1fr 1fr 1fr;
+      min-height:104px;
+    }
+    .technical-strip>div{
+      padding:24px 32px;
+      border-right:1px solid var(--line);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .technical-strip>div:last-child{border-right:0}
+    .tech-label{
+      font-size:9px;
+      text-transform:uppercase;
+      letter-spacing:.15em;
+      color:#687276;
+    }
+    .tech-value{
+      font-size:13px;
+      font-weight:600;
+    }
+    .technical-strip .primary{
+      background:var(--accent);
+      color:#fff;
+    }
+    .technical-strip .primary .tech-label{color:rgba(255,255,255,.7)}
+
+    .section{
+      background:var(--paper);
+      padding:8vw 5vw;
+    }
+    .section-head{
+      display:grid;
+      grid-template-columns:180px minmax(0,1fr);
+      gap:5vw;
+      align-items:start;
+      margin-bottom:6vw;
+    }
+    .section-kicker{
+      margin:11px 0 0;
+      font-size:9px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:#667276;
+      font-weight:700;
+    }
+    h2{
+      margin:0;
+      max-width:900px;
+      font-family:"Instrument Serif",serif;
+      font-weight:400;
+      letter-spacing:-.035em;
+      font-size:clamp(52px,7vw,112px);
+      line-height:.88;
+    }
+
+    .services-list{
+      border-top:1px solid var(--line);
+    }
+    .service{
+      display:grid;
+      grid-template-columns:80px minmax(220px,.9fr) minmax(240px,.7fr) 46px;
+      gap:28px;
+      align-items:center;
+      padding:32px 0;
+      border-bottom:1px solid var(--line);
+      text-decoration:none;
+      transition:padding .22s ease,background .22s ease;
+    }
+    .service:hover{
+      padding-left:16px;
+      padding-right:16px;
+      background:var(--paper-2);
+    }
+    .service-no{
+      color:var(--accent);
+      font-size:10px;
+      letter-spacing:.16em;
+    }
+    .service h3{
+      margin:0;
+      font-family:"Instrument Serif",serif;
+      font-size:clamp(34px,4vw,62px);
+      line-height:1;
+      font-weight:400;
+      letter-spacing:-.025em;
+    }
+    .service p{
+      margin:0;
+      color:#5c696d;
+      font-size:13px;
+      max-width:430px;
+    }
+    .service-arrow{
+      font-size:23px;
+      color:var(--accent);
+      justify-self:end;
+    }
+
+    .about{
+      background:var(--slate);
+      color:#fff;
+      padding:8vw 5vw;
+      display:grid;
+      grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);
+      gap:8vw;
+      align-items:end;
+    }
+    .about h2{
+      max-width:760px;
+      color:#fff;
+    }
+    .about h2 span{color:var(--accent)}
+    .about-copy{
+      border-top:1px solid var(--line-light);
+      padding-top:24px;
+    }
+    .about-copy p{
+      color:#bec8ca;
+      font-size:15px;
+      margin-bottom:24px;
+    }
+    .about-copy p:last-child{margin-bottom:0}
+    .about-code{
+      font-size:9px;
+      text-transform:uppercase;
+      letter-spacing:.15em;
+      color:#849397;
+      margin-bottom:14px;
+    }
+
+    .founders{
+      background:var(--paper);
+      padding:8vw 5vw;
+    }
+    .founder-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      border-top:1px solid var(--line);
+    }
+    .founder{
+      padding:36px 36px 10px 0;
+      border-right:1px solid var(--line);
+    }
+    .founder:last-child{
+      border-right:0;
+      padding-left:36px;
+      padding-right:0;
+    }
+    .founder-role{
+      margin:0 0 40px;
+      font-size:9px;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:#6c777a;
+    }
+    .founder h3{
+      margin:0 0 14px;
+      font-family:"Instrument Serif",serif;
+      font-size:clamp(40px,5vw,72px);
+      line-height:.95;
+      font-weight:400;
+    }
+    .founder a{
+      display:inline-block;
+      margin-top:16px;
+      color:var(--accent);
+      text-underline-offset:5px;
+      font-size:13px;
+    }
+
+    .contact{
+      background:var(--accent);
+      color:#fff;
+      padding:6vw 5vw;
+      display:grid;
+      grid-template-columns:1.3fr .7fr;
+      gap:8vw;
+      align-items:end;
+    }
+    .contact h2{
+      font-size:clamp(58px,8vw,126px);
+      max-width:900px;
+    }
+    .contact h2 em{font-weight:400}
+    .contact-side{
+      border-top:1px solid rgba(255,255,255,.45);
+      padding-top:24px;
+    }
+    .contact-side p{
+      margin:0 0 26px;
+      font-size:13px;
+      max-width:360px;
+    }
+    .contact-link{
+      display:inline-flex;
+      align-items:center;
+      gap:16px;
+      padding-bottom:5px;
+      border-bottom:1px solid #fff;
+      text-decoration:none;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+    }
+
+    footer{
+      background:var(--ink);
+      color:#92a0a4;
+      padding:28px 5vw;
+      display:flex;
+      justify-content:space-between;
+      gap:28px;
+      flex-wrap:wrap;
+      font-size:9px;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+    }
+    footer a{color:#d0d6d8;text-underline-offset:3px}
+
+    /* One intentional hero reveal, rather than animation on every section. */
+    .hero .eyebrow,.hero h1,.hero-lower,.hero-image{
+      opacity:0;
+      transform:translateY(18px);
+      animation:heroReveal .7s cubic-bezier(.2,.75,.2,1) forwards;
+    }
+    .hero h1{animation-delay:.08s}
+    .hero-lower{animation-delay:.16s}
+    .hero-image{animation-delay:.12s;transform:translateX(22px)}
+    @keyframes heroReveal{to{opacity:1;transform:none}}
+
+    @media(max-width:920px){
+      .hero{grid-template-columns:1fr .78fr}
+      .hero-copy{padding:8vw 4vw 5vw}
+      h1{font-size:clamp(64px,10vw,108px)}
+      .hero-lower{grid-template-columns:1fr;gap:22px}
+      .hero-action{justify-self:start}
+      .technical-strip{grid-template-columns:1fr 1fr}
+      .technical-strip>div:nth-child(2){border-right:0}
+      .technical-strip>div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .section-head{grid-template-columns:130px 1fr}
+      .service{grid-template-columns:54px 1fr 1fr 34px}
+      .about{gap:5vw}
+    }
+
+    @media(max-width:680px){
+      html{scroll-padding-top:70px}
+      .topbar{height:68px;padding:0 20px}
+      .top-meta span{display:none}
+      .top-meta{gap:0}
+      .hero{
+        display:flex;
+        flex-direction:column;
+        min-height:auto;
+      }
+      .hero-copy{padding:54px 24px 42px}
+      .eyebrow{margin-bottom:48px}
+      h1{font-size:clamp(68px,22vw,104px)}
+      h1 em{margin-left:8%}
+      .hero-lower{margin-top:58px;padding-top:0}
+      .hero-image{
+        min-height:430px;
+        margin-left:24px;
+        background-position:61% center;
+      }
+      .technical-strip{grid-template-columns:1fr 1fr}
+      .technical-strip>div{padding:20px}
+      .section,.founders{padding:72px 24px}
+      .section-head{grid-template-columns:1fr;gap:24px;margin-bottom:52px}
+      .section-kicker{margin:0}
+      h2{font-size:58px}
+      .service{
+        grid-template-columns:34px 1fr 28px;
+        gap:14px;
+        padding:26px 0;
+      }
+      .service p{grid-column:2/4;margin-top:2px}
+      .service h3{font-size:38px}
+      .service-arrow{grid-column:3;grid-row:1}
+      .about{
+        padding:72px 24px;
+        grid-template-columns:1fr;
+        gap:54px;
+      }
+      .founder-grid{grid-template-columns:1fr}
+      .founder,.founder:last-child{
+        border-right:0;
+        padding:28px 0 34px;
+        border-bottom:1px solid var(--line);
+      }
+      .founder-role{margin-bottom:24px}
+      .contact{
+        padding:68px 24px;
+        grid-template-columns:1fr;
+        gap:50px;
+      }
+      .contact h2{font-size:64px}
+      footer{padding:24px;line-height:1.7}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .hero .eyebrow,.hero h1,.hero-lower,.hero-image{
+        opacity:1;
+        transform:none;
+        animation:none;
+      }
+      .service{transition:none}
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <a class="brand" href="#main" aria-label="Clean Current home">
+      <span class="brand-mark" aria-hidden="true">CC</span>
+      Clean Current
+    </a>
+    <div class="top-meta">
+      <span>Halifax / Nova Scotia / Canada</span>
+      <a href="#contact">Contact ↗</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Underwater vessel maintenance</p>
+        <h1 id="hero-title">Clean <em>Current.</em></h1>
+
+        <div class="hero-lower">
+          <p class="hero-intro">
+            Halifax-based underwater vessel maintenance focused on propeller cleaning and polishing.
+          </p>
+          <a class="hero-action" href="#contact">Discuss a vessel <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <figure class="hero-image" aria-label="Halifax Harbour">
+        <div class="image-index">44°39′N</div>
+        <figcaption class="image-label">
+          <span>Halifax Harbour</span>
+          <span>Atlantic Canada</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="technical-strip" aria-label="Company overview">
+      <div class="primary">
+        <span class="tech-label">Clean Current</span>
+        <span class="tech-value">Halifax, NS</span>
+      </div>
+      <div>
+        <span class="tech-label">Focus 01</span>
+        <span class="tech-value">Propeller Cleaning</span>
+      </div>
+      <div>
+        <span class="tech-label">Focus 02</span>
+        <span class="tech-value">Propeller Polishing</span>
+      </div>
+      <div>
+        <span class="tech-label">Enquiries</span>
+        <span class="tech-value">Direct to founders</span>
+      </div>
+    </section>
+
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="section-head">
+        <p class="section-kicker">01 / Services</p>
+        <h2 id="services-title">Focused work below the waterline.</h2>
+      </div>
+
+      <div class="services-list">
+        <a class="service" href="#contact">
+          <span class="service-no">01</span>
+          <h3>Propeller cleaning</h3>
+          <p>Underwater cleaning focused on the vessel’s propeller. Send us the vessel details, location and timing to discuss the work required.</p>
+          <span class="service-arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="service" href="#contact">
+          <span class="service-no">02</span>
+          <h3>Propeller polishing</h3>
+          <p>Propeller polishing as part of planned or in-port maintenance. Contact us with the propeller details and your available service window.</p>
+          <span class="service-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div>
+        <p class="section-kicker" style="color:#93a2a6;margin-bottom:34px">02 / Clean Current</p>
+        <h2 id="about-title">Built in Halifax.<br><span>Made for the harbour.</span></h2>
+      </div>
+
+      <div class="about-copy">
+        <p class="about-code">HAL / 2026 / Marine Services</p>
+        <p>Clean Current was founded by Allister Roy and Brent Steeves with a focus on underwater vessel maintenance in Halifax and Atlantic Canada.</p>
+        <p>We’re starting with a clear specialty: propeller cleaning and polishing, with direct communication and straightforward service coordination.</p>
+      </div>
+    </section>
+
+    <section class="founders" id="founders" aria-labelledby="founders-title">
+      <div class="section-head">
+        <p class="section-kicker">03 / Founders</p>
+        <h2 id="founders-title">Talk directly to the people behind the work.</h2>
+      </div>
+
+      <div class="founder-grid">
+        <article class="founder">
+          <p class="founder-role">Co-founder / Clean Current</p>
+          <h3>Allister Roy</h3>
+          <a href="mailto:Aroy@cleancurrent.ca">Aroy@cleancurrent.ca ↗</a>
+        </article>
+
+        <article class="founder">
+          <p class="founder-role">Co-founder / Clean Current</p>
+          <h3>Brent Steeves</h3>
+          <a href="mailto:Bsteeves@cleancurrent.ca">Bsteeves@cleancurrent.ca ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div>
+        <p class="section-kicker" style="color:rgba(255,255,255,.72);margin-bottom:30px">04 / Enquiries</p>
+        <h2 id="contact-title">Tell us about <em>your vessel.</em></h2>
+      </div>
+
+      <div class="contact-side">
+        <p>For cleaning or polishing enquiries, include the vessel name, location, service required and your preferred timing.</p>
+        <a class="contact-link" href="mailto:Aroy@cleancurrent.ca?subject=Vessel%20maintenance%20enquiry">
+          Email Clean Current <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Clean Current © <span id="year">2026</span> / Halifax, Nova Scotia</span>
+    <span>Halifax Harbour photography / Clean Current site</span>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
