@@ -1,677 +1,339 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Clean Current — ROV Inspections &amp; Marine Services, Halifax</title>
-  <meta name="description" content="Clean Current provides ROV visual inspections and underwater video survey support for vessels, marine infrastructure and environmental teams in Nova Scotia and Atlantic Canada.">
-  <meta name="theme-color" content="#10171a">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="/assets/halifax-harbour.svg">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Clean Current</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="ROV inspections in Halifax Harbour and across Nova Scotia. Clear underwater video of hulls, propellers, moorings, wharves and the seabed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..800;1,62..125,400..700&display=swap">
+<style>
+/* Layout: full-bleed footage hero, then a chart-paper page: job sequence, footage, services, equipment sheet, founders, enquiry. */
+:root{
+  --paper:#f5f7f1;      /* chart white */
+  --shoal:#d7e9ea;      /* shallow-water tint */
+  --ink:#15262b;
+  --muted:#4d5f65;
+  --rule:#b9c9c9;
+  --magenta:#a3196d;    /* chart magenta: buoys, lights, notes */
+  --deep:#0d2930;       /* deep water, video bands */
+  --on-deep:#e7f0ef;
+  --on-deep-muted:#a9c0c1;
+  --font:"Archivo","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0f1e22;--shoal:#16333a;--ink:#e4eeed;--muted:#9fb4b7;--rule:#2d474d;--magenta:#e8619f;--deep:#081a1f;--on-deep:#e7f0ef;--on-deep-muted:#a9c0c1;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0f1e22;--shoal:#16333a;--ink:#e4eeed;--muted:#9fb4b7;--rule:#2d474d;--magenta:#e8619f;--deep:#081a1f;--on-deep:#e7f0ef;--on-deep-muted:#a9c0c1;color-scheme:dark}
 
-  <style>
-    :root{
-      --ink:#10171a;
-      --ink-2:#172126;
-      --slate:#25343a;
-      --fog:#dfe5e2;
-      --paper:#f3f1ea;
-      --paper-2:#e8e6dd;
-      --accent:#df5e35;
-      --line:rgba(16,23,26,.18);
-      --line-light:rgba(255,255,255,.18);
-    }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--magenta);outline-offset:3px}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.skip{position:absolute;left:12px;top:-60px;background:var(--paper);padding:8px 12px;z-index:30}
+.skip:focus{top:12px}
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:84px}
-    body{
-      margin:0;
-      background:var(--ink);
-      color:var(--ink);
-      font-family:"Manrope",sans-serif;
-      line-height:1.5;
-      -webkit-font-smoothing:antialiased;
-    }
+/* header */
+.bar{position:absolute;inset:0 0 auto;z-index:5;color:var(--on-deep)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:20px}
+.mark{font-weight:800;font-stretch:118%;font-size:19px;letter-spacing:-.01em;text-decoration:none}
+.nav{display:flex;gap:26px;font-size:15px}
+.nav a{text-decoration:none;opacity:.85}
+.nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
 
-    a{color:inherit}
-    a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
-    .skip{position:fixed;left:18px;top:-80px;z-index:50;background:#fff;padding:10px 14px}
-    .skip:focus{top:18px}
+/* hero */
+.hero{position:relative;background:var(--deep);color:var(--on-deep);min-height:min(88vh,820px);display:flex;align-items:flex-end;overflow:hidden}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,26,31,.55) 0%,rgba(8,26,31,.05) 30%,rgba(8,26,31,.15) 55%,rgba(8,26,31,.88) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-block:150px 46px}
+.hero h1{font-size:clamp(44px,8.2vw,108px);font-weight:800;font-stretch:122%;line-height:.93;letter-spacing:-.025em;max-width:11ch}
+.hero-foot{margin-top:30px;display:flex;flex-wrap:wrap;gap:28px 48px;align-items:flex-end;justify-content:space-between}
+.hero-foot p{max-width:46ch;font-size:clamp(17px,1.6vw,20px);color:var(--on-deep)}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--magenta);color:#fff;text-decoration:none;font-weight:700;font-size:16px;padding:15px 22px;border-radius:2px}
+.cta:hover{filter:brightness(1.1)}
+.label{font-style:italic;font-stretch:80%;font-size:14px;color:var(--on-deep-muted)}
+.hero .label{position:absolute;right:max(20px,env(safe-area-inset-right,0px));top:96px;z-index:2;text-align:right}
 
-    .topbar{
-      height:78px;
-      padding:0 4vw;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      color:#fff;
-      background:var(--ink);
-      border-bottom:1px solid var(--line-light);
-      position:relative;
-      z-index:10;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      text-decoration:none;
-      font-size:15px;
-      font-weight:700;
-      letter-spacing:.02em;
-    }
-    .brand-mark{
-      width:28px;
-      height:28px;
-      display:grid;
-      place-items:center;
-      border:1px solid rgba(255,255,255,.38);
-      border-radius:50%;
-      font-size:11px;
-      color:var(--accent);
-    }
-    .top-meta{
-      display:flex;
-      gap:36px;
-      align-items:center;
-      font-size:10px;
-      text-transform:uppercase;
-      letter-spacing:.15em;
-      color:#aeb9bc;
-    }
-    .top-meta a{text-decoration:none;color:#fff}
-    .top-meta a:hover{color:var(--accent)}
+/* sections */
+section{padding-block:96px}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;align-items:end;margin-bottom:52px}
+h2{font-size:clamp(34px,4.6vw,58px);font-weight:800;font-stretch:112%;line-height:1;letter-spacing:-.02em}
+.sec-head p{color:var(--muted);max-width:52ch}
 
-    .hero{
-      min-height:calc(100vh - 78px);
-      display:grid;
-      grid-template-columns:minmax(0,1.15fr) minmax(420px,.85fr);
-      background:var(--ink);
-      color:#fff;
-      overflow:hidden;
-    }
-    .hero-copy{
-      padding:7vw 5vw 4vw;
-      display:flex;
-      flex-direction:column;
-      position:relative;
-      z-index:2;
-    }
-    .eyebrow{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      margin:0 0 8vh;
-      color:#aeb9bc;
-      font-size:10px;
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      font-weight:600;
-    }
-    .eyebrow:before{
-      content:"";
-      width:42px;
-      height:1px;
-      background:var(--accent);
-    }
+/* job sequence: depth-sounding style */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--ink)}
+.steps li{padding:22px 22px 6px 0;border-right:1px solid var(--rule);min-width:0}
+.steps li+li{padding-left:22px}
+.steps li:last-child{border-right:0}
+.n{font-style:italic;font-stretch:72%;font-size:44px;font-weight:500;color:var(--magenta);line-height:1;display:block;margin-bottom:16px}
+.steps h3{font-size:20px;font-weight:700;margin-bottom:8px}
+.steps p{color:var(--muted);font-size:16px}
 
-    h1,h2,h3,p{margin-top:0}
-    h1{
-      margin:0;
-      max-width:720px;
-      font-family:"Instrument Serif",serif;
-      font-size:clamp(72px,9vw,150px);
-      line-height:.78;
-      letter-spacing:-.055em;
-      font-weight:400;
-    }
-    h1 em{
-      display:block;
-      margin-left:11%;
-      color:var(--accent);
-      font-weight:400;
-    }
+/* footage */
+.footage{background:var(--deep);color:var(--on-deep)}
+.footage .sec-head p{color:var(--on-deep-muted)}
+.reels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+figure{margin:0;min-width:0}
+.reels video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#0a1c21}
+figcaption{margin-top:14px;display:grid;gap:4px}
+figcaption strong{font-size:18px;font-weight:700}
+figcaption span{font-style:italic;font-stretch:84%;color:var(--on-deep-muted);font-size:15px}
+.wide{margin-top:28px}
+.wide img{width:100%;aspect-ratio:2/1;object-fit:cover}
 
-    .hero-lower{
-      margin-top:auto;
-      padding-top:7vh;
-      display:grid;
-      grid-template-columns:minmax(180px,320px) 1fr;
-      gap:44px;
-      align-items:end;
-    }
-    .hero-intro{
-      margin:0;
-      color:#c6ced0;
-      font-size:14px;
-      max-width:330px;
-    }
-    .hero-action{
-      justify-self:end;
-      display:inline-flex;
-      align-items:center;
-      gap:22px;
-      padding-bottom:5px;
-      text-decoration:none;
-      border-bottom:1px solid rgba(255,255,255,.6);
-      text-transform:uppercase;
-      font-size:10px;
-      letter-spacing:.14em;
-    }
-    .hero-action span{color:var(--accent);font-size:17px}
-    .hero-action:hover{border-color:var(--accent)}
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.service{border-top:2px solid var(--ink);padding-top:22px;min-width:0}
+.service h3{font-size:24px;font-weight:800;font-stretch:108%;margin-bottom:12px;line-height:1.15}
+.service p{color:var(--muted)}
+.service ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:6px;font-size:15px}
+.service li{padding-left:16px;position:relative}
+.service li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--magenta)}
+.note{margin-top:44px;font-style:italic;font-stretch:88%;color:var(--muted);max-width:60ch}
 
-    .hero-image{
-      position:relative;
-      margin:0;
-      min-height:620px;
-      background:
-        linear-gradient(180deg,rgba(16,23,26,.04),rgba(16,23,26,.5)),
-        url("/assets/halifax-harbour.svg") 63% center/cover no-repeat;
-    }
-    .hero-image:before{
-      content:"";
-      position:absolute;
-      left:0;
-      top:0;
-      bottom:0;
-      width:1px;
-      background:var(--line-light);
-    }
-    .image-label{
-      position:absolute;
-      left:24px;
-      bottom:24px;
-      right:24px;
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      color:#fff;
-      font-size:9px;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-    }
-    .image-index{
-      position:absolute;
-      top:28px;
-      right:24px;
-      width:76px;
-      height:76px;
-      border:1px solid rgba(255,255,255,.48);
-      display:grid;
-      place-items:center;
-      font-size:11px;
-      letter-spacing:.12em;
-    }
+/* equipment sheet */
+.kit{background:var(--shoal)}
+.sheet{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:56px;align-items:start}
+.sheet p{color:var(--muted);max-width:44ch;margin-top:20px}
+dl{margin:0;display:grid;grid-template-columns:minmax(120px,.8fr) minmax(0,1.4fr);border-top:2px solid var(--ink)}
+dt,dd{margin:0;padding:15px 0;border-bottom:1px solid var(--rule)}
+dt{font-style:italic;font-stretch:84%;color:var(--muted);padding-right:16px}
+dd{font-weight:600;font-variant-numeric:tabular-nums}
+dd small{font-weight:400;color:var(--muted);font-size:15px}
 
-    .technical-strip{
-      background:var(--paper);
-      border-bottom:1px solid var(--line);
-      display:grid;
-      grid-template-columns:1.4fr 1fr 1fr 1fr;
-      min-height:104px;
-    }
-    .technical-strip>div{
-      padding:24px 32px;
-      border-right:1px solid var(--line);
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      gap:10px;
-    }
-    .technical-strip>div:last-child{border-right:0}
-    .tech-label{
-      font-size:9px;
-      text-transform:uppercase;
-      letter-spacing:.15em;
-      color:#687276;
-    }
-    .tech-value{
-      font-size:13px;
-      font-weight:600;
-    }
-    .technical-strip .primary{
-      background:var(--accent);
-      color:#fff;
-    }
-    .technical-strip .primary .tech-label{color:rgba(255,255,255,.7)}
+/* founders */
+.people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.person{border-top:2px solid var(--ink);padding-top:22px}
+.person h3{font-size:clamp(28px,3vw,38px);font-weight:800;font-stretch:112%;line-height:1.05}
+.person p{color:var(--muted);margin-top:6px}
+.person a{display:inline-block;margin-top:14px;color:var(--magenta);font-weight:600;text-underline-offset:4px}
 
-    .section{
-      background:var(--paper);
-      padding:8vw 5vw;
-    }
-    .section-head{
-      display:grid;
-      grid-template-columns:180px minmax(0,1fr);
-      gap:5vw;
-      align-items:start;
-      margin-bottom:6vw;
-    }
-    .section-kicker{
-      margin:11px 0 0;
-      font-size:9px;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      color:#667276;
-      font-weight:700;
-    }
-    h2{
-      margin:0;
-      max-width:900px;
-      font-family:"Instrument Serif",serif;
-      font-weight:400;
-      letter-spacing:-.035em;
-      font-size:clamp(52px,7vw,112px);
-      line-height:.88;
-    }
+/* enquiry */
+.enquire{background:var(--deep);color:var(--on-deep)}
+.enquire .grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:start}
+.enquire h2{font-size:clamp(38px,5.4vw,72px);font-stretch:120%}
+.ask{list-style:none;margin:0 0 30px;padding:0;display:grid;gap:10px;border-top:1px solid rgba(231,240,239,.25);padding-top:20px}
+.ask li{display:grid;grid-template-columns:22px 1fr;gap:8px}
+.ask li::before{content:"";width:9px;height:9px;margin-top:.55em;border:2px solid var(--magenta);border-radius:50%}
+.addr{display:block;margin-top:18px;font-size:clamp(20px,2.4vw,28px);font-weight:700;user-select:all;word-break:break-word}
+.addr-note{color:var(--on-deep-muted);font-size:15px;margin-top:6px}
 
-    .services-list{
-      border-top:1px solid var(--line);
-    }
-    .service{
-      display:grid;
-      grid-template-columns:80px minmax(220px,.9fr) minmax(240px,.7fr) 46px;
-      gap:28px;
-      align-items:center;
-      padding:32px 0;
-      border-bottom:1px solid var(--line);
-      text-decoration:none;
-      transition:padding .22s ease,background .22s ease;
-    }
-    .service:hover{
-      padding-left:16px;
-      padding-right:16px;
-      background:var(--paper-2);
-    }
-    .service-no{
-      color:var(--accent);
-      font-size:10px;
-      letter-spacing:.16em;
-    }
-    .service h3{
-      margin:0;
-      font-family:"Instrument Serif",serif;
-      font-size:clamp(34px,4vw,62px);
-      line-height:1;
-      font-weight:400;
-      letter-spacing:-.025em;
-    }
-    .service p{
-      margin:0;
-      color:#5c696d;
-      font-size:13px;
-      max-width:430px;
-    }
-    .service-arrow{
-      font-size:23px;
-      color:var(--accent);
-      justify-self:end;
-    }
+footer{background:var(--deep);color:var(--on-deep-muted);font-size:14px;border-top:1px solid rgba(231,240,239,.15)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:26px}
 
-    .about{
-      background:var(--slate);
-      color:#fff;
-      padding:8vw 5vw;
-      display:grid;
-      grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);
-      gap:8vw;
-      align-items:end;
-    }
-    .about h2{
-      max-width:760px;
-      color:#fff;
-    }
-    .about h2 span{color:var(--accent)}
-    .about-copy{
-      border-top:1px solid var(--line-light);
-      padding-top:24px;
-    }
-    .about-copy p{
-      color:#bec8ca;
-      font-size:15px;
-      margin-bottom:24px;
-    }
-    .about-copy p:last-child{margin-bottom:0}
-    .about-code{
-      font-size:9px;
-      text-transform:uppercase;
-      letter-spacing:.15em;
-      color:#849397;
-      margin-bottom:14px;
-    }
-
-    .founders{
-      background:var(--paper);
-      padding:8vw 5vw;
-    }
-    .founder-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      border-top:1px solid var(--line);
-    }
-    .founder{
-      padding:36px 36px 10px 0;
-      border-right:1px solid var(--line);
-    }
-    .founder:last-child{
-      border-right:0;
-      padding-left:36px;
-      padding-right:0;
-    }
-    .founder-role{
-      margin:0 0 40px;
-      font-size:9px;
-      text-transform:uppercase;
-      letter-spacing:.16em;
-      color:#6c777a;
-    }
-    .founder h3{
-      margin:0 0 14px;
-      font-family:"Instrument Serif",serif;
-      font-size:clamp(40px,5vw,72px);
-      line-height:.95;
-      font-weight:400;
-    }
-    .founder a{
-      display:inline-block;
-      margin-top:16px;
-      color:var(--accent);
-      text-underline-offset:5px;
-      font-size:13px;
-    }
-
-    .contact{
-      background:var(--accent);
-      color:#fff;
-      padding:6vw 5vw;
-      display:grid;
-      grid-template-columns:1.3fr .7fr;
-      gap:8vw;
-      align-items:end;
-    }
-    .contact h2{
-      font-size:clamp(58px,8vw,126px);
-      max-width:900px;
-    }
-    .contact h2 em{font-weight:400}
-    .contact-side{
-      border-top:1px solid rgba(255,255,255,.45);
-      padding-top:24px;
-    }
-    .contact-side p{
-      margin:0 0 26px;
-      font-size:13px;
-      max-width:360px;
-    }
-    .contact-link{
-      display:inline-flex;
-      align-items:center;
-      gap:16px;
-      padding-bottom:5px;
-      border-bottom:1px solid #fff;
-      text-decoration:none;
-      font-size:11px;
-      text-transform:uppercase;
-      letter-spacing:.14em;
-    }
-
-    footer{
-      background:var(--ink);
-      color:#92a0a4;
-      padding:28px 5vw;
-      display:flex;
-      justify-content:space-between;
-      gap:28px;
-      flex-wrap:wrap;
-      font-size:9px;
-      text-transform:uppercase;
-      letter-spacing:.1em;
-    }
-    footer a{color:#d0d6d8;text-underline-offset:3px}
-
-    /* One intentional hero reveal, rather than animation on every section. */
-    .hero .eyebrow,.hero h1,.hero-lower,.hero-image{
-      opacity:0;
-      transform:translateY(18px);
-      animation:heroReveal .7s cubic-bezier(.2,.75,.2,1) forwards;
-    }
-    .hero h1{animation-delay:.08s}
-    .hero-lower{animation-delay:.16s}
-    .hero-image{animation-delay:.12s;transform:translateX(22px)}
-    @keyframes heroReveal{to{opacity:1;transform:none}}
-
-    @media(max-width:920px){
-      .hero{grid-template-columns:1fr .78fr}
-      .hero-copy{padding:8vw 4vw 5vw}
-      h1{font-size:clamp(64px,10vw,108px)}
-      .hero-lower{grid-template-columns:1fr;gap:22px}
-      .hero-action{justify-self:start}
-      .technical-strip{grid-template-columns:1fr 1fr}
-      .technical-strip>div:nth-child(2){border-right:0}
-      .technical-strip>div:nth-child(-n+2){border-bottom:1px solid var(--line)}
-      .section-head{grid-template-columns:130px 1fr}
-      .service{grid-template-columns:54px 1fr 1fr 34px}
-      .about{gap:5vw}
-    }
-
-    @media(max-width:680px){
-      html{scroll-padding-top:70px}
-      .topbar{height:68px;padding:0 20px}
-      .top-meta span{display:none}
-      .top-meta{gap:0}
-      .hero{
-        display:flex;
-        flex-direction:column;
-        min-height:auto;
-      }
-      .hero-copy{padding:54px 24px 42px}
-      .eyebrow{margin-bottom:48px}
-      h1{font-size:clamp(68px,22vw,104px)}
-      h1 em{margin-left:8%}
-      .hero-lower{margin-top:58px;padding-top:0}
-      .hero-image{
-        min-height:430px;
-        margin-left:24px;
-        background-position:61% center;
-      }
-      .technical-strip{grid-template-columns:1fr 1fr}
-      .technical-strip>div{padding:20px}
-      .section,.founders{padding:72px 24px}
-      .section-head{grid-template-columns:1fr;gap:24px;margin-bottom:52px}
-      .section-kicker{margin:0}
-      h2{font-size:58px}
-      .service{
-        grid-template-columns:34px 1fr 28px;
-        gap:14px;
-        padding:26px 0;
-      }
-      .service p{grid-column:2/4;margin-top:2px}
-      .service h3{font-size:38px}
-      .service-arrow{grid-column:3;grid-row:1}
-      .about{
-        padding:72px 24px;
-        grid-template-columns:1fr;
-        gap:54px;
-      }
-      .founder-grid{grid-template-columns:1fr}
-      .founder,.founder:last-child{
-        border-right:0;
-        padding:28px 0 34px;
-        border-bottom:1px solid var(--line);
-      }
-      .founder-role{margin-bottom:24px}
-      .contact{
-        padding:68px 24px;
-        grid-template-columns:1fr;
-        gap:50px;
-      }
-      .contact h2{font-size:64px}
-      footer{padding:24px;line-height:1.7}
-    }
-
-    @media(prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      .hero .eyebrow,.hero h1,.hero-lower,.hero-image{
-        opacity:1;
-        transform:none;
-        animation:none;
-      }
-      .service{transition:none}
-    }
-  </style>
+@media (max-width:900px){
+  .sec-head,.sheet,.enquire .grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps li:nth-child(2){border-right:0}
+  .steps li:nth-child(3){padding-left:0}
+  .steps li:nth-child(n+3){border-top:1px solid var(--rule)}
+  .services{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding-block:68px}
+  .nav{gap:16px;font-size:14px}
+  .nav .opt{display:none}
+  .hero .label{display:none}
+  .hero .wrap{padding-block:120px 34px}
+  .reels,.people{grid-template-columns:1fr}
+  .wide img{aspect-ratio:4/3}
+  .steps{grid-template-columns:1fr}
+  .steps li,.steps li+li{padding:20px 0 8px;border-right:0}
+  .steps li+li{border-top:1px solid var(--rule)}
+  dl{grid-template-columns:1fr}
+  dt{padding-bottom:0;border-bottom:0}
+  dd{padding-top:2px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">Skip to content</a>
 
-  <header class="topbar">
-    <a class="brand" href="#main" aria-label="Clean Current home">
-      <span class="brand-mark" aria-hidden="true">CC</span>
-      Clean Current
-    </a>
-    <div class="top-meta">
-      <span>Halifax / Nova Scotia / Canada</span>
-      <a href="#contact">Contact ↗</a>
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="#main">Clean Current</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#footage">Footage</a>
+      <a class="opt" href="#services">Services</a>
+      <a class="opt" href="#equipment">Equipment</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title" style="padding-block:0">
+    <img class="poster" src="assets/img/hero-poster.jpg" alt="" aria-hidden="true">
+    <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg" aria-hidden="true">
+      <source src="assets/video/hero-reel.mp4" type="video/mp4">
+    </video>
+    <span class="label">ROV footage, Nova Scotia, October 2026</span>
+    <div class="wrap">
+      <h1 id="hero-title">Underwater inspections in Halifax.</h1>
+      <div class="hero-foot">
+        <p>We send our ROV down to film your hull, propeller, mooring or the seabed, then give you the video and a short report on what we found.</p>
+        <a class="cta" href="mailto:aroy@cleancurrent.ca?subject=ROV%20inspection%20request">Request an inspection</a>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">ROV inspections &amp; marine services</p>
-        <h1 id="hero-title">Clean <em>Current.</em></h1>
-
-        <div class="hero-lower">
-          <p class="hero-intro">
-            See below the waterline. ROV visual inspections and underwater video survey support for vessel owners, marine operators and environmental teams.
-          </p>
-          <a class="hero-action" href="#contact">Discuss a project <span aria-hidden="true">↗</span></a>
-        </div>
+  <section aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="how-title">How a job works</h2>
+        <p>Most inspections are a few hours on site. You deal directly with the two people who run the ROV.</p>
       </div>
+      <ol class="steps">
+        <li><span class="n">1</span><h3>Tell us what and where</h3><p>The vessel or structure, its location, roughly how deep, and when you need it done.</p></li>
+        <li><span class="n">2</span><h3>We confirm the plan</h3><p>Scope, access, permissions and conditions, agreed with you before we arrive.</p></li>
+        <li><span class="n">3</span><h3>We dive</h3><p>From the wharf, the dock or your vessel. You can watch the live feed as we go.</p></li>
+        <li><span class="n">4</span><h3>You get the footage</h3><p>Recorded video, still images and a short written summary of what we saw.</p></li>
+      </ol>
+    </div>
+  </section>
 
-      <figure class="hero-image" aria-label="Halifax Harbour">
-        <div class="image-index">44°39′N</div>
-        <figcaption class="image-label">
-          <span>Halifax Harbour</span>
-          <span>Atlantic Canada</span>
-        </figcaption>
+  <section class="footage" id="footage" aria-labelledby="footage-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="footage-title">From recent dives</h2>
+        <p>Short clips straight off our ROV camera, with no colour correction. This is what your footage will look like.</p>
+      </div>
+      <div class="reels">
+        <figure>
+          <video class="clip" muted loop playsinline preload="metadata" poster="assets/img/thruster-tunnel.jpg" aria-label="ROV footage moving along a vessel's bow thruster tunnel and grating">
+            <source src="assets/video/thruster-tunnel.mp4" type="video/mp4">
+          </video>
+          <figcaption><strong>Bow thruster tunnel</strong><span>Vessel inspection, Halifax Harbour, October 2026</span></figcaption>
+        </figure>
+        <figure>
+          <video class="clip" muted loop playsinline preload="metadata" poster="assets/img/ghost-trap.jpg" aria-label="ROV footage of a lost fishing trap on the seabed, covered in anemones">
+            <source src="assets/video/ghost-trap.mp4" type="video/mp4">
+          </video>
+          <figcaption><strong>Lost trap located</strong><span>Shoreline cleanup support, Eastern Shore, October 2026</span></figcaption>
+        </figure>
+      </div>
+      <figure class="wide">
+        <img src="assets/img/rov-at-wharf-wide.jpg" alt="Our orange ROV at the surface beside a concrete wharf, tether running up to the deck" loading="lazy">
+        <figcaption><strong>Launching from the wharf</strong><span>Halifax Harbour, October 2026</span></figcaption>
       </figure>
-    </section>
+    </div>
+  </section>
 
-    <section class="technical-strip" aria-label="Company overview">
-      <div class="primary">
-        <span class="tech-label">Clean Current</span>
-        <span class="tech-value">Halifax, NS</span>
+  <section id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="services-title">What we inspect</h2>
+        <p>We film it and point out what we see. Your engineer or surveyor decides what needs doing.</p>
       </div>
+      <div class="services">
+        <article class="service">
+          <h3>Vessels</h3>
+          <p>A look under the hull before or after a voyage, a grounding, or a suspected strike.</p>
+          <ul><li>Hulls and bulbous bows</li><li>Propellers and rudders</li><li>Thruster tunnels and sea chests</li></ul>
+        </article>
+        <article class="service">
+          <h3>Wharves and moorings</h3>
+          <p>Video your maintenance crew can plan from before anyone gets wet.</p>
+          <ul><li>Pilings and wharf faces</li><li>Mooring chain and blocks</li><li>Intakes and outfalls</li></ul>
+        </article>
+        <article class="service">
+          <h3>Survey and cleanup support</h3>
+          <p>An ROV and operator working under your team's direction.</p>
+          <ul><li>Lost gear and debris location</li><li>Seabed and habitat video</li><li>Light recovery with the claw</li></ul>
+        </article>
+      </div>
+      <p class="note">We're also developing ROV-based propeller cleaning. If you'd like to be part of early trials, get in touch.</p>
+    </div>
+  </section>
+
+  <section class="kit" id="equipment" aria-labelledby="kit-title">
+    <div class="wrap sheet">
       <div>
-        <span class="tech-label">Focus 01</span>
-        <span class="tech-value">ROV Visual Inspections</span>
+        <h2 id="kit-title">The ROV</h2>
+        <p>A SeaBotix frame we rebuilt with current Blue Robotics electronics. Light enough for two of us to launch by hand off a wharf.</p>
       </div>
-      <div>
-        <span class="tech-label">Focus 02</span>
-        <span class="tech-value">Environmental Survey Support</span>
+      <dl>
+        <dt>Vehicle</dt><dd>SeaBotix LBV150 <small>with Blue Robotics electronics</small></dd>
+        <dt>Tether</dt><dd>300 m <small>(1,000 ft)</small></dd>
+        <dt>Depth rating</dt><dd>150 m <small>(500 ft)</small></dd>
+        <dt>Camera</dt><dd>Live feed to the surface <small>plus recorded HD video</small></dd>
+        <dt>Manipulator</dt><dd>Claw <small>for light recovery</small></dd>
+        <dt>Launches from</dt><dd>Wharf, dock or your vessel</dd>
+        <dt>Based in</dt><dd>Halifax and Dartmouth <small>working across Nova Scotia</small></dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="founders" aria-labelledby="founders-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="founders-title">Who you'll work with</h2>
+        <p>Clean Current is two people. Whoever answers your email is on site for the job.</p>
       </div>
-      <div>
-        <span class="tech-label">Enquiries</span>
-        <span class="tech-value">Direct to founders</span>
-      </div>
-    </section>
-
-    <section class="section" id="services" aria-labelledby="services-title">
-      <div class="section-head">
-        <p class="section-kicker">01 / Services</p>
-        <h2 id="services-title">Focused work below the waterline.</h2>
-      </div>
-
-      <div class="services-list">
-        <a class="service" href="#contact">
-          <span class="service-no">01</span>
-          <h3>ROV visual inspections</h3>
-          <p>Underwater video of hulls, propellers and other accessible vessel components. Review visible conditions before maintenance or document completed work.</p>
-          <span class="service-arrow" aria-hidden="true">↗</span>
-        </a>
-
-        <a class="service" href="#contact">
-          <span class="service-no">02</span>
-          <h3>Marine infrastructure</h3>
-          <p>Visual inspections of accessible docks, pilings, moorings, intakes and outfalls. Recorded footage and still images help your team plan maintenance and follow-up work.</p>
-          <span class="service-arrow" aria-hidden="true">↗</span>
-        </a>
-
-        <a class="service" href="#contact">
-          <span class="service-no">03</span>
-          <h3>Environmental survey support</h3>
-          <p>ROV and operator support for seabed video, habitat transects and repeat monitoring. We collect footage under your survey team’s direction for your specialists to interpret.</p>
-          <span class="service-arrow" aria-hidden="true">↗</span>
-        </a>
-
-        <a class="service" href="#contact">
-          <span class="service-no">04</span>
-          <h3>Propeller cleaning development</h3>
-          <p>We’re developing a robotic approach to underwater propeller cleaning and polishing. Contact us about development partnerships and future trials.</p>
-          <span class="service-arrow" aria-hidden="true">↗</span>
-        </a>
-      </div>
-      <p style="max-width:760px;margin:28px 0 0;color:#5c696d;font-size:13px">Our surface-powered SeaBotix ROV uses Blue Robotics electronics and carries a camera and claw manipulator, with approximately 300 metres of tether. Each job is scoped around site conditions, access and the required survey method. Visual footage supports assessment by your engineer, surveyor or environmental specialist.</p>
-    </section>
-
-    <section class="about" id="about" aria-labelledby="about-title">
-      <div>
-        <p class="section-kicker" style="color:#93a2a6;margin-bottom:34px">02 / Clean Current</p>
-        <h2 id="about-title">Built in Halifax.<br><span>Made for the harbour.</span></h2>
-      </div>
-
-      <div class="about-copy">
-        <p class="about-code">HAL / 2026 / Marine Services</p>
-        <p>Clean Current was founded by Allister Roy and Brent Steeves to support marine operators in Halifax and Atlantic Canada.</p>
-        <p>Our current focus is ROV inspections and underwater video collection, with propeller cleaning technology in development. You work directly with the founders to agree on the scope, site access and footage needed.</p>
-      </div>
-    </section>
-
-    <section class="founders" id="founders" aria-labelledby="founders-title">
-      <div class="section-head">
-        <p class="section-kicker">03 / Founders</p>
-        <h2 id="founders-title">Talk directly to the people behind the work.</h2>
-      </div>
-
-      <div class="founder-grid">
-        <article class="founder">
-          <p class="founder-role">Co-founder / Clean Current</p>
+      <div class="people">
+        <article class="person">
           <h3>Allister Roy</h3>
-          <a href="mailto:Aroy@cleancurrent.ca">Aroy@cleancurrent.ca ↗</a>
+          <p>Co-founder. ROV operations and client work.</p>
+          <a href="mailto:aroy@cleancurrent.ca">aroy@cleancurrent.ca</a>
         </article>
-
-        <article class="founder">
-          <p class="founder-role">Co-founder / Clean Current</p>
+        <article class="person">
           <h3>Brent Steeves</h3>
-          <a href="mailto:Bsteeves@cleancurrent.ca">Bsteeves@cleancurrent.ca ↗</a>
+          <p>Co-founder. Business, planning and client work.</p>
+          <a href="mailto:bsteeves@cleancurrent.ca">bsteeves@cleancurrent.ca</a>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-title">
+  <section class="enquire" id="contact" aria-labelledby="contact-title">
+    <div class="wrap grid">
+      <h2 id="contact-title">Book an inspection</h2>
       <div>
-        <p class="section-kicker" style="color:rgba(255,255,255,.72);margin-bottom:30px">04 / Enquiries</p>
-        <h2 id="contact-title">Tell us about <em>your project.</em></h2>
+        <ul class="ask">
+          <li>What you need inspected</li>
+          <li>Where it is and roughly how deep</li>
+          <li>When you need it done</li>
+          <li>Whether we'd work from a wharf or your vessel</li>
+        </ul>
+        <a class="cta" href="mailto:aroy@cleancurrent.ca?subject=ROV%20inspection%20request">Email Clean Current</a>
+        <span class="addr">aroy@cleancurrent.ca</span>
+        <p class="addr-note">Send those details and we'll reply with availability and a price.</p>
       </div>
+    </div>
+  </section>
+</main>
 
-      <div class="contact-side">
-        <p>Tell us what you need to inspect, the location, approximate depth and preferred timing. For environmental surveys, include your survey plan and footage requirements so we can discuss the right approach.</p>
-        <a class="contact-link" href="mailto:Aroy@cleancurrent.ca?subject=ROV%20inspection%20enquiry">
-          Email Clean Current <span aria-hidden="true">↗</span>
-        </a>
-      </div>
-    </section>
-  </main>
+<footer>
+  <div class="wrap">
+    <span>Clean Current, Halifax, Nova Scotia</span>
+    <span>&copy; <span id="year">2026</span> Clean Current</span>
+  </div>
+</footer>
 
-  <footer>
-    <span>Clean Current © <span id="year">2026</span> / Halifax, Nova Scotia</span>
-    <span>Halifax Harbour photography / Clean Current site</span>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<script>
+(function(){
+  document.getElementById('year').textContent=new Date().getFullYear();
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hero=document.getElementById('hero-video');
+  if(reduce&&hero){hero.removeAttribute('autoplay');try{hero.pause()}catch(e){}}
+  var clips=document.querySelectorAll('.clip');
+  if(reduce){clips.forEach(function(v){v.setAttribute('controls','')});return}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){var p=e.target.play();if(p&&p.catch)p.catch(function(){e.target.setAttribute('controls','')})}else{e.target.pause()}
+    })},{threshold:.35});
+    clips.forEach(function(v){io.observe(v)});
+  }else{clips.forEach(function(v){v.setAttribute('controls','')})}
+})();
+</script>
 </body>
 </html>
