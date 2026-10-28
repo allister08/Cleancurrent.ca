@@ -126,6 +126,25 @@ dd small{font-weight:400;color:var(--muted);font-size:15px}
 .addr{display:block;margin-top:18px;font-size:clamp(20px,2.4vw,28px);font-weight:700;user-select:all;word-break:break-word}
 .addr-note{color:var(--on-deep-muted);font-size:15px;margin-top:6px}
 
+.pair{margin-top:44px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.pair img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.pair figcaption span{color:var(--muted)}
+.kit-photo{margin-top:28px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.email{font-weight:600;color:var(--magenta);user-select:all;word-break:break-word;display:inline-block;margin-top:14px}
+.form{display:grid;gap:16px}
+.form .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.form label{display:grid;gap:6px;font-size:15px;font-weight:600;min-width:0}
+.form label em{font-style:italic;font-weight:400;color:var(--on-deep-muted)}
+.form input,.form textarea{font:inherit;font-weight:400;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:2px;padding:11px 12px;width:100%}
+.form textarea{resize:vertical}
+.form input:focus,.form textarea:focus{outline:3px solid var(--magenta);outline-offset:1px}
+.form .cta{border:0;cursor:pointer;justify-self:start;font-family:inherit}
+.form .cta[disabled]{opacity:.6;cursor:wait}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.form-status{min-height:1.5em;margin:0;font-size:15px}
+.form-status.ok{color:#9fe0b4}.form-status.err{color:#ffb4c8}
+.enquire .email{color:var(--on-deep);margin-top:0}
+.copy{font:inherit;font-size:14px;margin-left:6px;padding:3px 10px;border:1px solid rgba(231,240,239,.4);background:transparent;color:var(--on-deep);border-radius:2px;cursor:pointer}
 footer{background:var(--deep);color:var(--on-deep-muted);font-size:14px;border-top:1px solid rgba(231,240,239,.15)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:26px}
 
@@ -136,6 +155,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   .steps li:nth-child(3){padding-left:0}
   .steps li:nth-child(n+3){border-top:1px solid var(--rule)}
   .services{grid-template-columns:1fr;gap:36px}
+  .form .row{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   body{font-size:16px}
@@ -144,7 +164,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   .nav .opt{display:none}
   .hero .label{display:none}
   .hero .wrap{padding-block:120px 34px}
-  .reels,.people{grid-template-columns:1fr}
+  .reels,.people,.pair{grid-template-columns:1fr}
   .wide img{aspect-ratio:4/3}
   .steps{grid-template-columns:1fr}
   .steps li,.steps li+li{padding:20px 0 8px;border-right:0}
@@ -182,7 +202,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <h1 id="hero-title">Underwater inspections in Halifax.</h1>
       <div class="hero-foot">
         <p>We send our ROV down to film your hull, propeller, mooring or the seabed, then give you the video and a short report on what we found.</p>
-        <a class="cta" href="mailto:aroy@cleancurrent.ca?subject=ROV%20inspection%20request">Request an inspection</a>
+        <a class="cta" href="#contact">Request an inspection</a>
       </div>
     </div>
   </section>
@@ -199,6 +219,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <li><span class="n">3</span><h3>We dive</h3><p>From the wharf, the dock or your vessel. You can watch the live feed as we go.</p></li>
         <li><span class="n">4</span><h3>You get the footage</h3><p>Recorded video, still images and a short written summary of what we saw.</p></li>
       </ol>
+      <div class="pair">
+        <figure><img src="assets/img/field-setup.jpg" alt="Laptop, controller, power station and the ROV set up on a picnic table beside the water" loading="lazy"><figcaption><strong>Our setup on site</strong><span>Laptop, controller, power and the ROV. That's all we need.</span></figcaption></figure>
+        <figure><img src="assets/img/live-feed.jpg" alt="Laptop screen showing the ROV's live camera feed with the claw near a crab, depth 6.57 m and water temperature 11 degrees" loading="lazy"><figcaption><strong>The live feed</strong><span>What you'd see on the screen at 6.5 m, with depth and water temperature.</span></figcaption></figure>
+      </div>
     </div>
   </section>
 
@@ -261,6 +285,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <div>
         <h2 id="kit-title">The ROV</h2>
         <p>A SeaBotix frame we rebuilt with current Blue Robotics electronics. Light enough for two of us to launch by hand off a wharf.</p>
+        <img class="kit-photo" src="assets/img/rov-on-rocks.jpg" alt="Our orange SeaBotix ROV sitting on a rock by the harbour" loading="lazy">
       </div>
       <dl>
         <dt>Vehicle</dt><dd>SeaBotix LBV150 <small>with Blue Robotics electronics</small></dd>
@@ -285,12 +310,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
           <img class="person-photo" src="assets/img/allister-launching-rov.jpg" alt="Allister lowering the ROV off a wharf, tether reel at his feet" loading="lazy">
           <h3>Allister Roy</h3>
           <p>Co-founder. ROV operations and client work.</p>
-          <a href="mailto:aroy@cleancurrent.ca">aroy@cleancurrent.ca</a>
+          <span class="email">aroy@cleancurrent.ca</span>
         </article>
         <article class="person">
           <h3>Brent Steeves</h3>
           <p>Co-founder. Business, planning and client work.</p>
-          <a href="mailto:bsteeves@cleancurrent.ca">bsteeves@cleancurrent.ca</a>
+          <span class="email">bsteeves@cleancurrent.ca</span>
         </article>
       </div>
     </div>
@@ -300,15 +325,27 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
     <div class="wrap grid">
       <h2 id="contact-title">Book an inspection</h2>
       <div>
-        <ul class="ask">
-          <li>What you need inspected</li>
-          <li>Where it is and roughly how deep</li>
-          <li>When you need it done</li>
-          <li>Whether we'd work from a wharf or your vessel</li>
-        </ul>
-        <a class="cta" href="mailto:aroy@cleancurrent.ca?subject=ROV%20inspection%20request">Email Clean Current</a>
-        <span class="addr">aroy@cleancurrent.ca</span>
-        <p class="addr-note">Send those details and we'll reply with availability and a price.</p>
+        <form id="enquiry" class="form" action="https://formsubmit.co/aroy@cleancurrent.ca" method="POST" novalidate>
+          <div class="row">
+            <label for="f-name">Your name<input id="f-name" name="name" required autocomplete="name"></label>
+            <label for="f-company">Company <em>(optional)</em><input id="f-company" name="company" autocomplete="organization"></label>
+          </div>
+          <div class="row">
+            <label for="f-email">Email<input id="f-email" name="email" type="email" required autocomplete="email"></label>
+            <label for="f-phone">Phone <em>(optional)</em><input id="f-phone" name="phone" type="tel" autocomplete="tel"></label>
+          </div>
+          <label for="f-what">What needs inspecting<textarea id="f-what" name="what" rows="3" required placeholder="e.g. propeller and rudder on a 37 m vessel"></textarea></label>
+          <div class="row">
+            <label for="f-where">Where<input id="f-where" name="location" required placeholder="Wharf, harbour or site"></label>
+            <label for="f-when">When<input id="f-when" name="timing" placeholder="Date or how soon"></label>
+          </div>
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="_subject" value="New inspection request from cleancurrent.ca">
+          <input type="hidden" name="_template" value="table">
+          <button class="cta" type="submit" id="f-send">Send request</button>
+          <p class="form-status" id="f-status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="addr-note">Prefer email? Write to <span class="email">aroy@cleancurrent.ca</span> <button type="button" class="copy" data-copy="aroy@cleancurrent.ca">Copy</button></p>
       </div>
     </div>
   </section>
@@ -324,6 +361,20 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 <script>
 (function(){
   document.getElementById('year').textContent=new Date().getFullYear();
+  var form=document.getElementById('enquiry'),status=document.getElementById('f-status'),btn=document.getElementById('f-send');
+  if(form){form.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    if(!form.checkValidity()){status.className='form-status err';status.textContent='Please fill in your name, email, what needs inspecting and where.';var bad=form.querySelector(':invalid');if(bad)bad.focus();return}
+    btn.disabled=true;btn.textContent='Sending\u2026';status.className='form-status';status.textContent='';
+    fetch('https://formsubmit.co/ajax/aroy@cleancurrent.ca',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
+      .then(function(r){return r.json().then(function(d){if(!r.ok||String(d.success)==='false')throw new Error(d.message||'failed');})})
+      .then(function(){form.reset();status.className='form-status ok';status.textContent="Request sent. We'll reply by email.";btn.textContent='Sent';})
+      .catch(function(){status.className='form-status err';status.textContent="That didn't send. Please email aroy@cleancurrent.ca instead.";btn.disabled=false;btn.textContent='Send request';});
+  })}
+  document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+    var t=b.getAttribute('data-copy');
+    navigator.clipboard&&navigator.clipboard.writeText(t).then(function(){b.textContent='Copied'},function(){b.textContent='Select and copy'}).catch(function(){});
+  })});
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hero=document.getElementById('hero-video');
   if(reduce&&hero){hero.removeAttribute('autoplay');try{hero.pause()}catch(e){}}
