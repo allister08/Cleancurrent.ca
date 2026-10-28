@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cleancurrent.ca/sitemap.xml
