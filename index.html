@@ -111,6 +111,7 @@ dd small{font-weight:400;color:var(--muted);font-size:15px}
 /* founders */
 .people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
 .person{border-top:2px solid var(--ink);padding-top:22px}
+.person-photo{width:100%;aspect-ratio:5/4;object-fit:cover;margin-bottom:20px}
 .person h3{font-size:clamp(28px,3vw,38px);font-weight:800;font-stretch:112%;line-height:1.05}
 .person p{color:var(--muted);margin-top:6px}
 .person a{display:inline-block;margin-top:14px;color:var(--magenta);font-weight:600;text-underline-offset:4px}
@@ -281,6 +282,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       </div>
       <div class="people">
         <article class="person">
+          <img class="person-photo" src="assets/img/allister-launching-rov.jpg" alt="Allister lowering the ROV off a wharf, tether reel at his feet" loading="lazy">
           <h3>Allister Roy</h3>
           <p>Co-founder. ROV operations and client work.</p>
           <a href="mailto:aroy@cleancurrent.ca">aroy@cleancurrent.ca</a>
