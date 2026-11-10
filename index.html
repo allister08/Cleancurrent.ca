@@ -144,8 +144,8 @@ figcaption span{font-style:italic;font-stretch:84%;font-size:15px;color:var(--mu
 .n{font-style:italic;font-stretch:72%;font-size:44px;font-weight:500;color:var(--magenta);line-height:1;display:block;margin-bottom:16px}
 .steps h3{font-size:20px;font-weight:700;margin-bottom:8px}
 .steps p{color:var(--muted);font-size:16px}
-.pair{margin-top:48px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
-.pair img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+.pair{margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.pair img,.pair video{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
 
 /* wharf photo band */
 .band{position:relative;background:var(--deep);color:var(--on-deep)}
@@ -287,7 +287,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <button type="button" class="chip" data-filter="find" aria-pressed="false">Sea life and finds</button>
       </div>
       <div class="gallery" id="gallery">
-        <button type="button" class="tile feature" data-cat="inspection" data-src="assets/video/thruster-tunnel.mp4" data-title="Bow thruster tunnel" data-meta="Vessel inspection, Halifax Harbour, October 2026">
+        <button type="button" class="tile feature" data-cat="find" data-src="assets/video/catfish.mp4" data-title="Catfish on the lake bed" data-meta="Chocolate Lake, Halifax, November 2026">
+          <video muted loop playsinline preload="none" poster="assets/img/catfish.jpg" tabindex="-1" aria-hidden="true"><source src="assets/video/catfish.mp4" type="video/mp4"></video>
+          <span class="tile-cap"><strong>Catfish on the lake bed</strong><span>Chocolate Lake, Halifax, November 2026</span></span>
+          <span class="play" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="tile" data-cat="inspection" data-src="assets/video/thruster-tunnel.mp4" data-title="Bow thruster tunnel" data-meta="Vessel inspection, Halifax Harbour, October 2026">
           <video muted loop playsinline preload="none" poster="assets/img/thruster-tunnel.jpg" tabindex="-1" aria-hidden="true"><source src="assets/video/thruster-tunnel.mp4" type="video/mp4"></video>
           <span class="tile-cap"><strong>Bow thruster tunnel</strong><span>Vessel inspection, Halifax Harbour, October 2026</span></span>
           <span class="play" aria-hidden="true"></span>
@@ -297,8 +302,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
           <span class="tile-cap"><strong>Lost trap located</strong><span>Shoreline cleanup support, Eastern Shore, October 2026</span></span>
           <span class="play" aria-hidden="true"></span>
         </button>
-        <div class="tile slot" data-cat="slot">Waiting on your clip</div>
-        <div class="tile slot" data-cat="slot">Waiting on your clip</div>
+        <button type="button" class="tile" data-cat="inspection" data-src="assets/video/mooring-chain.mp4" data-title="Mooring chain down to the block" data-meta="Mooring inspection, Nova Scotia, October 2026">
+          <video muted loop playsinline preload="none" poster="assets/img/mooring-chain.jpg" tabindex="-1" aria-hidden="true"><source src="assets/video/mooring-chain.mp4" type="video/mp4"></video>
+          <span class="tile-cap"><strong>Mooring chain down to the block</strong><span>Mooring inspection, Nova Scotia, October 2026</span></span>
+          <span class="play" aria-hidden="true"></span>
+        </button>
         <div class="tile slot" data-cat="slot">Waiting on your clip</div>
         <div class="tile slot" data-cat="slot">Waiting on your clip</div>
       </div>
@@ -333,7 +341,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       </ol>
       <div class="pair">
         <figure><img src="assets/img/field-setup.jpg" alt="Laptop, controller, power station and the ROV set up on a picnic table beside the water" loading="lazy"><figcaption><strong>Our setup on site</strong><span>Laptop, controller, power and the ROV. That's all we need.</span></figcaption></figure>
-        <figure><img src="assets/img/live-feed.jpg" alt="Laptop screen showing the ROV's live camera feed with the claw near a crab, depth 6.57 m and water temperature 11 degrees" loading="lazy"><figcaption><strong>The live feed</strong><span>What you'd see on the screen at 6.5 m, with depth and water temperature.</span></figcaption></figure>
+        <figure><video class="clip" muted loop playsinline preload="metadata" poster="assets/img/catfish.jpg" aria-label="ROV footage of a catfish resting on a sandy lake bed, with the ROV's claw in the foreground"><source src="assets/video/catfish-loop.mp4" type="video/mp4"></video><figcaption><strong>What the camera records</strong><span>A catfish at Chocolate Lake, November 2026, on our new camera.</span></figcaption></figure>
+        <figure><img src="assets/img/night-launch.jpg" alt="The ROV on a boat ramp at night with its lights on, tether coiled beside it" loading="lazy"><figcaption><strong>Day or night</strong><span>Lights on, launching off a boat ramp after dark.</span></figcaption></figure>
       </div>
     </div>
   </section>
