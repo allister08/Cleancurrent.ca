@@ -4,360 +4,98 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Clean Current | ROV inspections in Halifax</title>
-<meta name="description" content="ROV inspections and underwater filming from Halifax, across Atlantic Canada and further for larger jobs. 4K video of hulls, propellers, moorings, wharves, dams and the seabed.">
+<meta name="description" content="ROV inspections and 4K underwater filming from Halifax and Dartmouth. Hulls, propellers, moorings, wharves, dams and the seabed, with no divers in the water.">
 <link rel="canonical" href="https://cleancurrent.ca/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Clean Current">
 <meta property="og:title" content="Clean Current | ROV inspections in Halifax">
-<meta property="og:description" content="4K underwater video of hulls, propellers, moorings, wharves, dams and the seabed. Based in Halifax and Dartmouth, working across Atlantic Canada.">
+<meta property="og:description" content="ROV inspections and 4K underwater filming from Halifax and Dartmouth. Hulls, propellers, moorings, wharves, dams and the seabed, with no divers in the water.">
 <meta property="og:url" content="https://cleancurrent.ca/">
 <meta property="og:image" content="https://cleancurrent.ca/assets/img/share.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="628">
-<meta property="og:image:alt" content="Clean Current's orange ROV on the rocks by Halifax Harbour">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0f2b30">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Clean Current","legalName":"ClearCurrent Marine Ltd","url":"https://cleancurrent.ca/","email":"aroy@cleancurrent.ca","image":"https://cleancurrent.ca/assets/img/share.jpg","description":"ROV inspections and 4K underwater filming: hulls, propellers, moorings, wharves, dams and the seabed. Based in Halifax and Dartmouth, Nova Scotia.","areaServed":[{"@type":"City","name":"Halifax"},{"@type":"City","name":"Dartmouth"},{"@type":"AdministrativeArea","name":"Nova Scotia"},{"@type":"AdministrativeArea","name":"New Brunswick"},{"@type":"AdministrativeArea","name":"Prince Edward Island"}],"founder":[{"@type":"Person","name":"Allister Roy"},{"@type":"Person","name":"Brent Steeves"}],"knowsAbout":["ROV inspection","Underwater hull inspection","Mooring inspection","Wharf and piling inspection","Dam and intake inspection","Underwater filming"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..800&display=swap">
-<style>
-:root{
-  --water:#0f2b30;--water-2:#0a2024;--paper:#f4f6f4;--ink:#17252a;--muted:#586a6e;--rule:#cfd8d6;
-  --orange:#e5481f;--orange-ink:#b9350f;--on-water:#e9f0ee;--on-water-muted:#a7bdbd;--on-water-rule:rgba(233,240,238,.18);
-  --font:"Archivo","Helvetica Neue",Arial,sans-serif;color-scheme:light}
-*{box-sizing:border-box}
-[hidden]{display:none!important}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-img,video{max-width:100%;display:block}
-a{color:inherit}
-button{font-family:inherit}
-:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
-h1,h2,h3,p,figure{margin:0}
-h1,h2,h3{text-wrap:balance;font-weight:700;letter-spacing:-.01em;line-height:1.15}
-h2{font-size:clamp(28px,3.4vw,38px)}
-.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-.skip{position:absolute;left:12px;top:-60px;background:var(--paper);padding:8px 12px;z-index:30}.skip:focus{top:12px}
-main>section{padding-block:88px}
-.lede{color:var(--muted);max-width:58ch;margin-top:12px}
-.dark{background:var(--water);color:var(--on-water)}
-.dark .lede{color:var(--on-water-muted)}
-.btn{display:inline-block;background:var(--orange);color:#fff;font-weight:700;font-size:16px;text-decoration:none;padding:12px 18px;border-radius:4px;border:0;cursor:pointer}
-.btn:hover{background:var(--orange-ink)}
-.textlink{font-weight:600;text-underline-offset:4px}
-
-/* top bar */
-.bar{position:fixed;inset:0 0 auto;z-index:20;color:var(--on-water);padding-top:env(safe-area-inset-top,0px);transition:background-color .2s}
-.bar .wrap{display:flex;align-items:center;gap:24px;padding-block:16px}
-.bar.solid{background:var(--water);box-shadow:0 1px 0 var(--on-water-rule)}
-.mark{font-weight:800;font-size:19px;text-decoration:none;display:flex;align-items:center;gap:10px}
-.mark i{width:12px;height:12px;border-radius:3px;background:var(--orange);display:inline-block}
-.nav{display:flex;gap:22px;font-size:15px;margin-left:auto}
-.nav a{text-decoration:none;opacity:.9}.nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
-.bar .btn{font-size:14px;padding:8px 13px}
-
-/* hero */
-.hero{position:relative;min-height:min(86vh,800px);display:flex;align-items:flex-end;overflow:hidden;background:var(--water);color:#fff}
-.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,32,36,.55) 0%,rgba(10,32,36,0) 28%,rgba(10,32,36,.15) 55%,rgba(10,32,36,.88) 100%)}
-.hero .wrap{position:relative;z-index:2;width:100%;padding-block:140px 44px}
-.hero h1{font-size:clamp(36px,5.2vw,64px);max-width:15ch}
-.hero p{margin-top:16px;max-width:52ch;font-size:clamp(17px,1.5vw,19px);color:#e3ecea}
-.hero-actions{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center}
-.hero-actions .textlink{color:#fff}
-.hero .label{position:absolute;right:max(20px,env(safe-area-inset-right,0px));bottom:16px;z-index:2;font-size:13px;color:#cfdcda}
-main>section.hero{padding-block:0}
-
-/* who we are */
-.intro-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:start}
-.intro-grid>img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px}
-.intro-text p{margin-top:16px;max-width:56ch}
-.intro-text p:first-of-type{margin-top:18px}
-.people{margin-top:28px;display:grid;gap:14px;border-top:1px solid var(--rule);padding-top:20px}
-.people div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px}
-.people strong{font-weight:700}
-.people span{color:var(--muted)}
-.people a{color:var(--orange-ink);font-weight:600}
-.snaps{margin-top:56px;display:grid;grid-template-columns:1.1fr 1fr 1.3fr;gap:16px;align-items:start}
-.snaps img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px}
-.snaps figure:nth-child(2) img{aspect-ratio:1/1}
-.snaps figcaption{margin-top:8px;font-size:14px;color:var(--muted);max-width:40ch}
-
-/* footage */
-.footage-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px 40px;margin-bottom:30px}
-.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.tile{position:relative;display:block;width:100%;min-width:0;aspect-ratio:16/9;padding:0;border:0;border-radius:4px;overflow:hidden;background:var(--water-2);color:#fff;text-align:left;cursor:pointer}
-.tile.feature{grid-column:1/-1;aspect-ratio:21/9}
-.tile video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,20,24,0) 55%,rgba(6,20,24,.85) 100%)}
-.tile-cap{position:absolute;left:16px;right:60px;bottom:13px;z-index:2;display:grid;gap:1px}
-.tile-cap strong{font-size:16px;font-weight:700;line-height:1.25}
-.tile.feature .tile-cap strong{font-size:clamp(18px,2vw,24px)}
-.tile-cap span{font-size:13px;color:#c5d4d3}
-.play{position:absolute;right:14px;bottom:14px;z-index:2;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center}
-.play::before{content:"";border-style:solid;border-width:6px 0 6px 10px;border-color:transparent transparent transparent var(--water);margin-left:2px}
-.tile:hover .play{background:var(--orange)}.tile:hover .play::before{border-left-color:#fff}
-
-/* viewer */
-.viewer{width:min(1120px,calc(100vw - 24px));max-height:calc(100vh - 24px);padding:0;border:0;border-radius:4px;background:var(--water-2);color:var(--on-water);overflow:auto}
-.viewer::backdrop{background:rgba(4,14,17,.86)}
-.viewer-top,.viewer-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px}
-.viewer-top div{display:grid;gap:2px;min-width:0}
-.viewer-top strong{font-size:18px;font-weight:700}
-.viewer-top span,.viewer-nav span{font-size:14px;color:var(--on-water-muted);font-variant-numeric:tabular-nums}
-.viewer video{width:100%;max-height:72vh;background:#000}
-.vbtn{font-size:15px;font-weight:600;color:var(--on-water);background:transparent;border:1px solid var(--on-water-rule);border-radius:4px;padding:8px 14px;cursor:pointer}
-.vbtn:hover{border-color:var(--on-water)}
-
-/* ride-along */
-.dive{background:var(--water-2)}
-.dive-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 56px;align-items:end;margin-bottom:28px}
-.dive-intro p{color:var(--on-water-muted);max-width:52ch}
-.screen{position:relative;border-radius:4px;overflow:hidden;background:#000;aspect-ratio:16/9}
-.screen video{width:100%;height:100%;object-fit:cover}
-.hud{position:absolute;inset:0;pointer-events:none;font-variant-numeric:tabular-nums;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.7)}
-.hud-tl,.hud-tr,.hud-bl,.hud-br{position:absolute;display:grid;gap:2px}
-.hud-tl{left:16px;top:14px}.hud-tr{right:16px;top:14px;text-align:right}
-.hud-bl{left:16px;bottom:14px}.hud-br{right:16px;bottom:14px;text-align:right;justify-items:end}
-.hud small{font-size:13px;opacity:.85}
-.hud b{font-weight:700;font-size:15px}
-.hud .big{font-size:clamp(28px,4.2vw,48px);font-weight:800;line-height:1}
-.hud .big span{font-size:.45em;font-weight:600;margin-left:4px}
-.rec::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--orange);margin-right:7px;vertical-align:1px}
-.compass{width:46px;height:46px}
-.dive-ctrl{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-top:16px}
-.dive-ctrl .lbl{font-size:14px;color:var(--on-water-muted);margin-right:4px}
-#playbtn{min-width:84px;background:var(--orange);border-color:var(--orange);color:#fff}
-.charts{margin-top:26px;display:grid;gap:18px}
-.chart-label{display:flex;justify-content:space-between;gap:12px;font-size:14px;color:var(--on-water-muted);margin-bottom:6px}
-.chart{width:100%;height:auto;display:block;overflow:visible}
-#scrub{cursor:pointer;touch-action:none;border-radius:2px;user-select:none;-webkit-user-select:none}
-.chart .grid{stroke:var(--on-water-rule);stroke-width:1}
-.chart .axis{fill:var(--on-water-muted);font-family:var(--font);font-size:11px}
-.chart .line{fill:none;stroke:var(--on-water);stroke-width:2;vector-effect:non-scaling-stroke}
-.chart .area{fill:rgba(233,240,238,.07)}
-.chart .band{fill:var(--orange);opacity:.32}
-.chart .marker{stroke:var(--orange);stroke-width:2;vector-effect:non-scaling-stroke}
-.chart .chap{stroke:var(--on-water-muted);stroke-width:1;stroke-dasharray:3 3;vector-effect:non-scaling-stroke}
-
-/* dive log */
-.log-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:40px 56px;align-items:start}
-.log{width:100%;border-collapse:collapse;font-size:16px}
-.log th{text-align:left;font-size:14px;font-weight:600;color:var(--muted);padding:0 16px 10px 0;border-bottom:2px solid var(--ink)}
-.log td{padding:14px 16px 14px 0;border-bottom:1px solid var(--rule);vertical-align:top}
-.log td:first-child{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--muted)}
-.log td:nth-child(2){font-weight:600;white-space:nowrap}
-.log a{color:var(--orange-ink);font-weight:600;text-underline-offset:3px;white-space:nowrap}
-
-/* services */
-.svc-list{margin-top:36px;border-top:2px solid var(--ink)}
-.svc{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);gap:28px;padding:26px 0;border-bottom:1px solid var(--rule);align-items:start}
-.svc img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:4px}
-.svc h3{font-size:22px}
-.svc p{color:var(--muted);margin-top:8px;max-width:44ch}
-.svc ul{margin:0;padding-left:18px;display:grid;gap:4px}
-.svc li::marker{color:var(--orange)}
-.svc-note{margin-top:22px;color:var(--muted);max-width:62ch}
-
-/* how a job works */
-.how{background:#e7eeeb}
-.steps{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
-.steps li{min-width:0}
-.steps .n{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--paper);font-weight:700;font-size:15px;margin-bottom:14px}
-.steps h3{font-size:18px;margin-bottom:6px}
-.steps p{color:var(--muted);font-size:16px}
-.steps a{color:var(--orange-ink);font-weight:600;text-underline-offset:3px}
-
-/* rov */
-.rov-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
-.rov-grid>div>p{color:var(--muted);margin-top:12px;max-width:52ch}
-dl{margin:28px 0 0;display:grid;grid-template-columns:minmax(120px,.7fr) minmax(0,1.5fr);border-top:2px solid var(--ink)}
-dt,dd{margin:0;padding:12px 0;border-bottom:1px solid var(--rule)}
-dt{color:var(--muted);padding-right:16px}
-dd{font-weight:600}
-dd small{font-weight:400;color:var(--muted);font-size:15px}
-.rov-photos{display:grid;gap:16px}
-.rov-photos img{width:100%;border-radius:4px;object-fit:cover}
-.rov-photos figure:first-child img{aspect-ratio:1/1}
-.rov-photos figure:last-child img{aspect-ratio:4/3}
-.rov-photos figcaption{margin-top:8px;font-size:14px;color:var(--muted)}
-
-/* contact */
-.enquire .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:56px;align-items:start}
-.enquire h2{font-size:clamp(32px,4vw,46px)}
-.direct{margin-top:28px;display:grid;gap:10px;font-size:16px}
-.direct strong{display:block;font-weight:700}
-.direct span{color:var(--on-water-muted)}
-.email{font-weight:600;color:#fff;user-select:all;word-break:break-word}
-.copy{font-size:13px;margin-left:6px;padding:2px 9px;border:1px solid var(--on-water-rule);background:transparent;color:var(--on-water);border-radius:4px;cursor:pointer}
-.form{display:grid;gap:16px}
-.form .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.form label{display:grid;gap:6px;font-size:15px;font-weight:600;min-width:0}
-.form label em{font-style:normal;font-weight:400;color:var(--on-water-muted)}
-.form input,.form textarea{font:inherit;font-weight:400;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--rule);border-radius:4px;padding:11px 12px;width:100%}
-.form textarea{resize:vertical}
-.form input:focus,.form textarea:focus{outline:3px solid var(--orange);outline-offset:1px}
-.form .cta{justify-self:start;background:var(--orange);color:#fff;border:0;border-radius:4px;font-weight:700;font-size:16px;padding:12px 18px;cursor:pointer}
-.form .cta:hover{background:var(--orange-ink)}
-.form .cta[disabled]{opacity:.6;cursor:wait}
-.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-.form-status{min-height:1.5em;margin:0;font-size:15px}
-.form-status.ok{color:#9fe0b4}.form-status.err{color:#ffb4c8}
-footer{background:var(--water-2);color:var(--on-water-muted);font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:24px}
-
-@media (max-width:960px){
-  .intro-grid,.rov-grid,.enquire .grid,.dive-intro,.log-grid{grid-template-columns:1fr}
-  .intro-grid{gap:32px}.intro-grid>img{aspect-ratio:4/3}
-  .svc{grid-template-columns:160px minmax(0,1fr)}.svc ul{grid-column:2}
-  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .bar .btn{display:none}
-}
-@media (max-width:640px){
-  body{font-size:16px}
-  main>section{padding-block:64px}
-  .nav{gap:16px;font-size:14px}.nav .opt{display:none}
-  .hero .label{display:none}
-  .hero .wrap{padding-block:110px 32px}
-  .gallery,.snaps{grid-template-columns:1fr}
-  .snaps figure:nth-child(2) img{aspect-ratio:4/3}
-  .tile.feature{grid-column:auto;aspect-ratio:16/9}
-  .people div{grid-template-columns:1fr;gap:2px}
-  .svc{grid-template-columns:1fr;gap:12px}.svc ul{grid-column:auto}
-  .steps{grid-template-columns:1fr}
-  .log thead{display:none}
-  .log,.log tbody,.log tr,.log td{display:block}
-  .log tr{padding:12px 0;border-bottom:1px solid var(--rule)}
-  .log td{border:0;padding:0}
-  .log td:nth-child(2){margin-top:2px}
-  dl{grid-template-columns:1fr}dt{padding-bottom:0;border-bottom:0}dd{padding-top:2px}
-  .form .row{grid-template-columns:1fr}
-  #scrub{height:96px}#overview{height:64px}
-  .hud-tr{display:none}.hud small{font-size:12px}.compass{width:34px;height:34px}
-}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+<link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
 <header class="bar" id="bar">
   <div class="wrap">
-    <a class="mark" href="#main"><i aria-hidden="true"></i>Clean Current</a>
-    <nav class="nav" aria-label="Main">
-      <a href="#footage">Footage</a>
-      <a class="opt" href="#log">Dive log</a>
-      <a class="opt" href="#services">Services</a>
-      <a class="opt" href="#rov">The ROV</a>
-      <a href="#contact">Contact</a>
+    <a class="mark" href="/" aria-label="Clean Current home"><img class="logo-rov" src="/assets/img/logo/rov.svg" alt="" width="55" height="36"><img class="logo-word" src="/assets/img/logo/wordmark.svg" alt="Clean Current" width="159" height="12"></a>
+    <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="/services/">Services</a>
+      <a href="/work/">Our work</a>
+      <a href="/about/">About</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/contact/">Contact</a>
+      <a class="btn" href="/contact/">Ask about a job</a>
     </nav>
-    <a class="btn" href="#contact">Ask about a job</a>
   </div>
 </header>
-
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
-    <img class="poster" src="assets/img/hero-poster.jpg" alt="" aria-hidden="true">
-    <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg" aria-hidden="true">
-      <source src="assets/video/hero-reel.mp4" type="video/mp4">
+    <img class="poster" src="/assets/img/hero-poster.jpg" alt="" aria-hidden="true">
+    <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="/assets/img/hero-poster.jpg" aria-hidden="true">
+      <source src="/assets/video/hero-reel.mp4" type="video/mp4">
     </video>
     <span class="label">A school of fish at 20 m, November 20, 2026</span>
     <div class="wrap">
       <h1 id="hero-title">Underwater video of your hull, mooring or wharf.</h1>
       <p>We're Allister and Brent. We run an underwater ROV out of Halifax and Dartmouth, film what's down there, and send you the footage with a short write-up.</p>
       <div class="hero-actions">
-        <a class="btn" href="#contact">Ask about a job</a>
-        <a class="textlink" href="#footage">See the footage</a>
+        <a class="btn" href="/contact/">Ask about a job</a>
+        <a class="textlink" href="/work/">See our work</a>
       </div>
     </div>
   </section>
 
-  <section id="about" aria-labelledby="about-title">
+  <section aria-labelledby="intro-title">
+    <div class="wrap intro-grid">
+      <img src="/assets/img/allister-launching-rov.jpg" alt="Allister lowering the orange ROV off a wharf, tether reel at his feet">
+      <div class="intro-text">
+        <h2 id="intro-title">No divers in the water</h2>
+        <p>Our ROV goes down on a tether while we watch the live camera on the wharf. You see the bottom of your boat, your mooring or your wharf the same day, without hauling anything out or putting anyone in the water.</p>
+        <p>It's just the two of us, so the person you email is the person on site for the job.</p>
+        <p><a class="textlink dark-link" href="/about/">More about us and the ROV</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tint" id="services" aria-labelledby="services-title">
     <div class="wrap">
-      <div class="intro-grid">
-        <img src="assets/img/allister-launching-rov.jpg" alt="Allister lowering the orange ROV off a wharf, tether reel at his feet">
-        <div class="intro-text">
-          <h2 id="about-title">Who we are</h2>
-          <p>Clean Current is Allister Roy and Brent Steeves. We started in January 2026 with a SeaBotix LBV150 and rebuilt it with current Blue Robotics electronics. We call it Frank.</p>
-          <p>Allister flies the ROV and edits the footage. Brent handles quotes, planning and paperwork. Whoever answers your email is on site for the job.</p>
-          <p>Most jobs take a few hours. We set up on the dock, the wharf or your boat, you watch the live feed with us if you want to, and you get the video afterwards.</p>
-          <div class="people">
-            <div><strong>Allister Roy</strong><span>ROV pilot and footage. <a href="mailto:aroy@cleancurrent.ca">aroy@cleancurrent.ca</a></span></div>
-            <div><strong>Brent Steeves</strong><span>Quotes, planning and admin. <a href="mailto:bsteeves@cleancurrent.ca">bsteeves@cleancurrent.ca</a></span></div>
-          </div>
-        </div>
-      </div>
-      <div class="snaps">
-        <figure><img src="assets/img/field-setup.jpg" alt="Laptop, controller, power station and the ROV on a picnic table beside the water" loading="lazy"><figcaption>Everything we bring: a laptop, a controller, a power station and the ROV.</figcaption></figure>
-        <figure><img src="assets/img/night-launch.jpg" alt="The ROV on a boat ramp at night with its lights on" loading="lazy"><figcaption>Launching off a boat ramp after dark. The ROV has its own lights.</figcaption></figure>
-        <figure><img src="assets/img/rov-at-wharf-wide.jpg" alt="The orange ROV at the surface beside a concrete wharf, tether running up to the deck" loading="lazy"><figcaption>Frank at the surface beside a wharf in Halifax Harbour, October 2026.</figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="dark" id="footage" aria-labelledby="footage-title">
-    <div class="wrap">
-      <div class="footage-head">
-        <div><h2 id="footage-title">Footage from recent dives</h2>
-        <p class="lede">Straight off the ROV camera with no colour correction, so this is what your footage will look like. Click a clip to watch it full size.</p></div>
-      </div>
-      <div class="gallery" id="gallery">
-        <button type="button" class="tile feature" data-cat="find" data-src="assets/video/phone-recovery.mp4" data-title="Phone recovered from the bottom" data-meta="Herring Cove, Nova Scotia, November 2026">
-          <video muted loop playsinline preload="none" poster="assets/img/phone-recovery.jpg" tabindex="-1" aria-hidden="true"><source src="assets/video/phone-recovery.mp4" type="video/mp4"></video>
-          <span class="tile-cap"><strong>Phone recovered from the bottom</strong><span>Herring Cove, Nova Scotia, November 2026</span></span>
-          <span class="play" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="tile" data-cat="find" data-src="assets/video/catfish.mp4" data-title="Catfish on the lake bed" data-meta="Chocolate Lake, Halifax, November 2026">
-          <video muted loop playsinline preload="none" poster="assets/img/catfish.jpg" tabindex="-1" aria-hidden="true"><source src="assets/video/catfish.mp4" type="video/mp4"></video>
-          <span class="tile-cap"><strong>Catfish on the lake bed</strong><span>Chocolate Lake, Halifax, November 2026</span></span>
-          <span class="play" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="tile" data-cat="inspection" data-src="assets/video/thruster-tunnel.mp4" data-title="Bow thruster tunnel" data-meta="Vessel inspection, Halifax Harbour, October 2026">
-          <video muted loop playsinline preload="none" poster="assets/img/thruster-tunnel.jpg" tabindex="-1" aria-hidden="true"><source src="assets/video/thruster-tunnel.mp4" type="video/mp4"></video>
-          <span class="tile-cap"><strong>Bow thruster tunnel</strong><span>Vessel inspection, Halifax Harbour, October 2026</span></span>
-          <span class="play" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="tile" data-cat="find" data-src="assets/video/ghost-trap.mp4" data-title="Lost trap located" data-meta="Shoreline cleanup support, Kraut Point, October 2026">
-          <video muted loop playsinline preload="none" poster="assets/img/ghost-trap.jpg" tabindex="-1" aria-hidden="true"><source src="assets/video/ghost-trap.mp4" type="video/mp4"></video>
-          <span class="tile-cap"><strong>Lost trap located</strong><span>Shoreline cleanup support, Kraut Point, October 2026</span></span>
-          <span class="play" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="tile" data-cat="inspection" data-src="assets/video/mooring-chain.mp4" data-title="Mooring chain down to the block" data-meta="Mooring inspection, Nova Scotia, October 2026">
-          <video muted loop playsinline preload="none" poster="assets/img/mooring-chain.jpg" tabindex="-1" aria-hidden="true"><source src="assets/video/mooring-chain.mp4" type="video/mp4"></video>
-          <span class="tile-cap"><strong>Mooring chain down to the block</strong><span>Mooring inspection, Nova Scotia, October 2026</span></span>
-          <span class="play" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="tile" data-cat="find" data-src="assets/video/lobster.mp4" data-title="Lobster on the sand at 95 ft" data-meta="Seabed survey, Nova Scotia, November 2026">
-          <video muted loop playsinline preload="none" poster="assets/img/lobster.jpg" tabindex="-1" aria-hidden="true"><source src="assets/video/lobster.mp4" type="video/mp4"></video>
-          <span class="tile-cap"><strong>Lobster on the sand at 95 ft</strong><span>Seabed survey, Nova Scotia, November 2026</span></span>
-          <span class="play" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="tile" data-cat="find" data-src="assets/video/sculpin.mp4" data-title="Sculpin on the reef at 30 ft" data-meta="Seabed survey, Nova Scotia, November 2026">
-          <video muted loop playsinline preload="none" poster="assets/img/sculpin.jpg" tabindex="-1" aria-hidden="true"><source src="assets/video/sculpin.mp4" type="video/mp4"></video>
-          <span class="tile-cap"><strong>Sculpin on the reef at 30 ft</strong><span>Seabed survey, Nova Scotia, November 2026</span></span>
-          <span class="play" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="tile feature" data-cat="find" data-src="assets/video/reef-survey.mp4" data-title="Pink coralline reef and fish" data-meta="Seabed survey, Nova Scotia, November 2026">
-          <video muted loop playsinline preload="none" poster="assets/img/reef-survey.jpg" tabindex="-1" aria-hidden="true"><source src="assets/video/reef-survey.mp4" type="video/mp4"></video>
-          <span class="tile-cap"><strong>Pink coralline reef and fish</strong><span>Seabed survey, Nova Scotia, November 2026</span></span>
-          <span class="play" aria-hidden="true"></span>
-        </button>
+      <h2 id="services-title">What we do</h2>
+      <p class="lede">We film it and tell you what we saw. Whether something needs fixing is up to your engineer or surveyor.</p>
+      <div class="svc-links">
+        <a class="svc-link" href="/services/boats/">
+          <img src="/assets/img/thruster-tunnel.jpg" alt="" loading="lazy">
+          <span><strong>Boats and ships</strong><span>A look under the hull without hauling out: hull, propellers, rudders and thrusters.</span></span>
+          <span class="arrow" aria-hidden="true"></span>
+        </a>
+        <a class="svc-link" href="/services/wharves-moorings-dams/">
+          <img src="/assets/img/mooring-chain.jpg" alt="" loading="lazy">
+          <span><strong>Wharves, moorings and dams</strong><span>Pilings, mooring chain and blocks, dam faces, intakes and outfalls.</span></span>
+          <span class="arrow" aria-hidden="true"></span>
+        </a>
+        <a class="svc-link" href="/services/surveys-cleanups/">
+          <img src="/assets/img/ghost-trap.jpg" alt="" loading="lazy">
+          <span><strong>Surveys and cleanups</strong><span>Finding lost gear, filming the seabed, and light recovery with the claw.</span></span>
+          <span class="arrow" aria-hidden="true"></span>
+        </a>
+        <a class="svc-link" href="/services/filming/">
+          <img src="/assets/img/reef-survey.jpg" alt="" loading="lazy">
+          <span><strong>Filming and expeditions</strong><span>4K footage for wreck crews, researchers and documentary teams.</span></span>
+          <span class="arrow" aria-hidden="true"></span>
+        </a>
       </div>
     </div>
   </section>
-
-  <dialog class="viewer" id="viewer" aria-labelledby="v-title">
-    <div class="viewer-top">
-      <div><strong id="v-title"></strong><span id="v-meta"></span></div>
-      <button type="button" class="vbtn" id="v-close">Close</button>
-    </div>
-    <video id="v-video" controls playsinline></video>
-    <div class="viewer-nav">
-      <button type="button" class="vbtn" id="v-prev">Previous</button>
-      <span id="v-count"></span>
-      <button type="button" class="vbtn" id="v-next">Next</button>
-    </div>
-  </dialog>
 
   <section class="dark dive" id="dive" aria-labelledby="dive-title">
     <div class="wrap">
@@ -366,7 +104,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <p>84 seconds from November 20, 2026. The depth, heading and dive clock come from the ROV's own sensor log for that dive, matched to the video. Drag along the chart to move through it.</p>
       </div>
       <div class="screen">
-        <video id="dive-video" muted playsinline preload="none" poster="assets/img/ride-along.jpg" aria-label="ROV footage of a school of fish passing over a rocky seabed at about 20 metres"><source src="assets/video/ride-along.mp4" type="video/mp4"></video>
+        <video id="dive-video" muted playsinline preload="none" poster="/assets/img/ride-along.jpg" aria-label="ROV footage of a school of fish passing over a rocky seabed at about 20 metres"><source src="/assets/video/ride-along.mp4" type="video/mp4"></video>
         <div class="hud" aria-hidden="true">
           <div class="hud-tl"><b class="rec">Dive time <span id="h-time">02:03</span></b><small>Nov 20, 2026, Nova Scotia</small></div>
           <div class="hud-tr"><b id="h-mode">Depth hold</b><small>Flight mode</small></div>
@@ -395,259 +133,64 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       </div>
   </section>
 
-  <section id="log" aria-labelledby="log-title">
-    <div class="wrap log-grid">
-      <div>
-        <h2 id="log-title">Dive log</h2>
-        <p class="lede">Every job and test dive we've done so far, newest first.</p>
-      </div>
-      <table class="log">
-        <thead><tr><th scope="col">Date</th><th scope="col">Where</th><th scope="col">What we did</th></tr></thead>
-        <tbody>
-          <tr><td>Nov 20, 2026</td><td>Nova Scotia</td><td>Two survey dives. A school of fish at 20 m, a lobster at 29 m and a sculpin at 9 m. <a href="#dive">Ride along</a></td></tr>
-          <tr><td>Nov 11, 2026</td><td>Herring Cove</td><td>Found and recovered a phone from the bottom with the claw, and filmed a propeller.</td></tr>
-          <tr><td>Nov 5, 2026</td><td>Chocolate Lake, Halifax</td><td>First dive with the new camera. Came across a catfish on the lake bed.</td></tr>
-          <tr><td>Oct 27, 2026</td><td>Halifax Harbour</td><td>Hull and bow thruster inspection on a working vessel.</td></tr>
-          <tr><td>Oct 27, 2026</td><td>Kraut Point</td><td>Found lost traps for a shoreline cleanup crew.</td></tr>
-          <tr><td>Oct 25, 2026</td><td>Lions Park</td><td>Seabed and debris survey.</td></tr>
-          <tr><td>Oct 24, 2026</td><td>Dingle, Halifax</td><td>Seabed survey on the Northwest Arm.</td></tr>
-          <tr><td>Oct 21, 2026</td><td>Nova Scotia</td><td>Private mooring inspection, chain down to the block. <a href="sample-report.html">Sample report</a></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="how" id="how" aria-labelledby="how-title">
+  <section aria-labelledby="work-title">
     <div class="wrap">
-      <h2 id="how-title">How a job works</h2>
-      <ol class="steps">
-        <li><span class="n">1</span><h3>Tell us what and where</h3><p>The boat or structure, where it is, roughly how deep, and when you need it done.</p></li>
-        <li><span class="n">2</span><h3>We agree the plan</h3><p>What we'll film, access, any permissions, and the weather window.</p></li>
-        <li><span class="n">3</span><h3>We dive</h3><p>From the wharf, the dock or your boat. You can watch the live feed with us.</p></li>
-        <li><span class="n">4</span><h3>You get the footage</h3><p>The video, stills and a short summary of what we saw. <a href="sample-report.html">See a sample report</a></p></li>
-      </ol>
+      <div class="row-head"><h2 id="work-title">Recent work</h2><a class="textlink dark-link" href="/work/">All jobs and footage</a></div>
+      <div class="cards">
+        <a class="card" href="/work/#phone">
+          <img src="/assets/img/phone-recovery.jpg" alt="" loading="lazy">
+          <span class="card-meta">November 2026</span>
+          <strong>Phone recovered at Herring Cove</strong>
+          <span>A phone went into the water at Herring Cove. We searched the bottom with the ROV, found it, and brought it up with the claw.</span>
+        </a>
+        <a class="card" href="/work/#traps">
+          <img src="/assets/img/ghost-trap.jpg" alt="" loading="lazy">
+          <span class="card-meta">October 2026</span>
+          <strong>Lost traps found at Kraut Point</strong>
+          <span>We worked with a shoreline cleanup crew to find lost traps on the bottom, so they knew exactly where to haul from.</span>
+        </a>
+        <a class="card" href="/work/#mooring">
+          <img src="/assets/img/mooring-chain.jpg" alt="" loading="lazy">
+          <span class="card-meta">October 2026</span>
+          <strong>Mooring chain inspection</strong>
+          <span>A private mooring filmed from mid-water down to the block, so the owner could see the chain without hauling it.</span>
+        </a>
+      </div>
     </div>
   </section>
 
-  <section id="services" aria-labelledby="services-title">
+  <section class="cta-band">
     <div class="wrap">
-      <h2 id="services-title">What we can film</h2>
-      <p class="lede">We film it and tell you what we saw. Whether something needs fixing is up to your engineer or surveyor.</p>
-      <div class="svc-list">
-        <article class="svc">
-          <img src="assets/img/thruster-tunnel.jpg" alt="Inside a bow thruster tunnel on a vessel hull" loading="lazy">
-          <div><h3>Boats and ships</h3><p>A look under the hull before or after a trip, a grounding, or if you think you hit something.</p></div>
-          <ul><li>Hulls and bulbous bows</li><li>Propellers and rudders</li><li>Thruster tunnels and sea chests</li></ul>
-        </article>
-        <article class="svc">
-          <img src="assets/img/mooring-chain.jpg" alt="Mooring chain hanging down to a concrete block" loading="lazy">
-          <div><h3>Wharves, moorings and dams</h3><p>Video your maintenance crew or engineer can plan from before anyone gets in the water.</p></div>
-          <ul><li>Pilings and wharf faces</li><li>Mooring chain and blocks</li><li>Dam faces, intakes and trash racks</li><li>Outfalls and outlet works</li></ul>
-        </article>
-        <article class="svc">
-          <img src="assets/img/ghost-trap.jpg" alt="A lost fishing trap on the seabed" loading="lazy">
-          <div><h3>Surveys and cleanups</h3><p>The ROV and a pilot working for your team, wherever you need eyes on the bottom.</p></div>
-          <ul><li>Finding lost gear and debris</li><li>Seabed and habitat video</li><li>Light recovery with the claw</li></ul>
-        </article>
-        <article class="svc">
-          <img src="assets/img/reef-survey.jpg" alt="Pink coralline reef with eelgrass and fish" loading="lazy">
-          <div><h3>Filming and expeditions</h3><p>4K underwater footage for wreck crews, researchers, and documentary or social media teams.</p></div>
-          <ul><li>Shipwrecks and dive sites</li><li>Marine life and habitat</li><li>A second camera or ROV pilot for your team</li></ul>
-        </article>
-      </div>
-      <p class="svc-note">We're also working on propeller cleaning with the ROV. If you'd like to try it early, let us know.</p>
-    </div>
-  </section>
-
-  <section class="how" id="rov" aria-labelledby="rov-title">
-    <div class="wrap rov-grid">
-      <div>
-        <h2 id="rov-title">The ROV</h2>
-        <p>A SeaBotix frame rebuilt with Blue Robotics electronics. It's light enough for the two of us to lower off a wharf by hand.</p>
-        <dl>
-          <dt>Vehicle</dt><dd>SeaBotix LBV150 <small>with Blue Robotics electronics</small></dd>
-          <dt>Tether</dt><dd>300 m <small>(1,000 ft)</small></dd>
-          <dt>Depth rating</dt><dd>150 m <small>(500 ft)</small></dd>
-          <dt>Camera</dt><dd>Recorded 4K video <small>plus a live feed to the surface</small></dd>
-          <dt>Claw</dt><dd>For picking up small things</dd>
-          <dt>Launches from</dt><dd>A wharf, a dock or your boat</dd>
-          <dt>Based in</dt><dd>Halifax and Dartmouth</dd>
-          <dt>Works</dt><dd>Across Atlantic Canada <small>and further for bigger jobs</small></dd>
-        </dl>
-      </div>
-      <div class="rov-photos">
-        <figure><img src="assets/img/rov-on-rocks.jpg" alt="The orange SeaBotix ROV sitting on a rock by the harbour" loading="lazy"><figcaption>Frank out of the water.</figcaption></figure>
-        <figure><img src="assets/img/live-feed.jpg" alt="The laptop screen during a dive showing the camera view with the claw, and readings for depth, lights, camera tilt and water temperature" loading="lazy"><figcaption>What we see on the laptop during a dive: the camera, depth, lights and water temperature.</figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="dark enquire" id="contact" aria-labelledby="contact-title">
-    <div class="wrap grid">
-      <div>
-        <h2 id="contact-title">Ask about a job</h2>
-        <p class="lede">Tell us what needs looking at and where it is. One of us usually replies the same day.</p>
-        <div class="direct">
-          <div><strong>Allister Roy</strong><span class="email">aroy@cleancurrent.ca</span> <button type="button" class="copy" data-copy="aroy@cleancurrent.ca">Copy</button></div>
-          <div><strong>Brent Steeves</strong><span class="email">bsteeves@cleancurrent.ca</span> <button type="button" class="copy" data-copy="bsteeves@cleancurrent.ca">Copy</button></div>
-        </div>
-      </div>
-      <div>
-        <form id="enquiry" class="form" action="https://formsubmit.co/aroy@cleancurrent.ca" method="POST" novalidate>
-          <div class="row">
-            <label for="f-name"><span>Your name</span><input id="f-name" name="name" required autocomplete="name"></label>
-            <label for="f-company"><span>Company <em>(optional)</em></span><input id="f-company" name="company" autocomplete="organization"></label>
-          </div>
-          <div class="row">
-            <label for="f-email"><span>Email</span><input id="f-email" name="email" type="email" required autocomplete="email"></label>
-            <label for="f-phone"><span>Phone <em>(optional)</em></span><input id="f-phone" name="phone" type="tel" autocomplete="tel"></label>
-          </div>
-          <label for="f-what"><span>What needs looking at</span><textarea id="f-what" name="what" rows="3" required placeholder="For example, the propeller and rudder on our 37 m boat"></textarea></label>
-          <div class="row">
-            <label for="f-where"><span>Where</span><input id="f-where" name="location" required placeholder="Wharf, harbour or site"></label>
-            <label for="f-when"><span>When</span><input id="f-when" name="timing" placeholder="Date or how soon"></label>
-          </div>
-          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <input type="hidden" name="_subject" value="New job enquiry from cleancurrent.ca">
-          <input type="hidden" name="_template" value="table">
-          <button class="cta" type="submit" id="f-send">Send</button>
-          <p class="form-status" id="f-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
+      <div><h2>Got something that needs a look?</h2><p>Tell us what it is and where. One of us usually replies the same day.</p></div>
+      <a class="btn" href="/contact/">Ask about a job</a>
     </div>
   </section>
 </main>
-
 <footer>
-  <div class="wrap">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="mark" href="/"><img class="logo-rov" src="/assets/img/logo/rov.svg" alt="" width="55" height="36"><img class="logo-word" src="/assets/img/logo/wordmark.svg" alt="Clean Current" width="159" height="12"></a>
+      <p>ROV inspections and underwater filming from Halifax and Dartmouth, Nova Scotia.</p>
+    </div>
+    <div>
+      <h2>Services</h2>
+      <ul><li><a href="/services/boats/">Boats and ships</a></li><li><a href="/services/wharves-moorings-dams/">Wharves, moorings and dams</a></li><li><a href="/services/surveys-cleanups/">Surveys and cleanups</a></li><li><a href="/services/filming/">Filming and expeditions</a></li></ul>
+    </div>
+    <div>
+      <h2>Company</h2>
+      <ul><li><a href="/work/">Our work</a></li><li><a href="/about/">About</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/sample-report.html">Sample report</a></li><li><a href="/privacy/">Privacy</a></li></ul>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <ul><li><a href="mailto:aroy@cleancurrent.ca">aroy@cleancurrent.ca</a></li><li><a href="mailto:bsteeves@cleancurrent.ca">bsteeves@cleancurrent.ca</a></li><li><a href="/contact/">Send us a job</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap foot-legal">
     <span>Clean Current is ClearCurrent Marine Ltd., Halifax, Nova Scotia.</span>
     <span>&copy; <span id="year">2026</span></span>
   </div>
 </footer>
-<script>
-(function(){
-  document.getElementById('year').textContent=new Date().getFullYear();
-  var bar=document.getElementById('bar'),tick=false;
-  function sound(){tick=false;var y=window.scrollY||0,max=Math.max(1,document.documentElement.scrollHeight-window.innerHeight);
-    bar.classList.toggle('solid',y>60)}
-  window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(sound)}},{passive:true});sound();
-  var tiles=[].slice.call(document.querySelectorAll('#gallery .tile')),clipTiles=tiles.filter(function(t){return t.dataset.src});
-  document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){
-    var f=c.dataset.filter;document.querySelectorAll('.chip').forEach(function(o){o.setAttribute('aria-pressed',o===c?'true':'false')});
-    tiles.forEach(function(t){t.hidden=f!=='all'&&t.dataset.cat!==f});
-  })});
-  var viewer=document.getElementById('viewer'),vv=document.getElementById('v-video'),cur=0;
-  function shown(){return clipTiles.filter(function(t){return !t.hidden})}
-  function load(i){var list=shown();if(!list.length)return;cur=(i+list.length)%list.length;var t=list[cur];
-    document.getElementById('v-title').textContent=t.dataset.title;document.getElementById('v-meta').textContent=t.dataset.meta;
-    document.getElementById('v-count').textContent=(cur+1)+' of '+list.length;
-    vv.src=t.dataset.src;vv.muted=true;var p=vv.play();if(p&&p.catch)p.catch(function(){})}
-  clipTiles.forEach(function(t){
-    var pv=t.querySelector('video');
-    t.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse'){var p=pv.play();if(p&&p.catch)p.catch(function(){})}});
-    t.addEventListener('pointerleave',function(){pv.pause()});
-    t.addEventListener('click',function(){pv.pause();if(viewer.showModal){viewer.showModal();load(shown().indexOf(t))}});
-  });
-  document.getElementById('v-close').addEventListener('click',function(){viewer.close()});
-  document.getElementById('v-prev').addEventListener('click',function(){load(cur-1)});
-  document.getElementById('v-next').addEventListener('click',function(){load(cur+1)});
-  viewer.addEventListener('click',function(e){if(e.target===viewer)viewer.close()});
-  viewer.addEventListener('close',function(){vv.pause();vv.removeAttribute('src');vv.load()});
-  viewer.addEventListener('keydown',function(e){if(e.key==='ArrowRight')load(cur+1);if(e.key==='ArrowLeft')load(cur-1)});
-  var form=document.getElementById('enquiry'),status=document.getElementById('f-status'),btn=document.getElementById('f-send');
-  if(form){form.addEventListener('submit',function(ev){
-    ev.preventDefault();
-    if(!form.checkValidity()){status.className='form-status err';status.textContent='Add your name, email, what needs looking at and where it is.';var bad=form.querySelector(':invalid');if(bad)bad.focus();return}
-    btn.disabled=true;btn.textContent='Sending\u2026';status.className='form-status';status.textContent='';
-    fetch('https://formsubmit.co/ajax/aroy@cleancurrent.ca',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
-      .then(function(r){return r.json().then(function(d){if(!r.ok||String(d.success)==='false')throw new Error(d.message||'failed');})})
-      .then(function(){form.reset();status.className='form-status ok';status.textContent="Request sent. We'll reply by email.";btn.textContent='Sent';})
-      .catch(function(){status.className='form-status err';status.textContent="That didn't send. Please email aroy@cleancurrent.ca instead.";btn.disabled=false;btn.textContent='Send';});
-  })}
-  document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
-    var t=b.getAttribute('data-copy');
-    navigator.clipboard&&navigator.clipboard.writeText(t).then(function(){b.textContent='Copied'},function(){b.textContent='Select and copy'}).catch(function(){});
-  })});
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var hero=document.getElementById('hero-video');
-  if(reduce&&hero){hero.removeAttribute('autoplay');try{hero.pause()}catch(e){}}
-  var clips=document.querySelectorAll('.clip');
-  if(reduce){clips.forEach(function(v){v.setAttribute('controls','')});return}
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){
-      if(e.isIntersecting){var p=e.target.play();if(p&&p.catch)p.catch(function(){e.target.setAttribute('controls','')})}else{e.target.pause()}
-    })},{threshold:.35});
-    clips.forEach(function(v){io.observe(v)});
-  }else{clips.forEach(function(v){v.setAttribute('controls','')})}
-})();
-</script>
-<script>
-(function(){
-  var v=document.getElementById('dive-video');if(!v)return;
-  var D=null,dur=84,svgNS='http://www.w3.org/2000/svg';
-  var $=function(id){return document.getElementById(id)};
-  var scrub=$('scrub'),ov=$('overview'),play=$('playbtn'),reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var cards=['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW'];
-  function el(n,a,p){var e=document.createElementNS(svgNS,n);for(var k in a)e.setAttribute(k,a[k]);(p||null)&&p.appendChild(e);return e}
-  function fmt(s){s=Math.max(0,Math.round(s));return Math.floor(s/60)+':'+('0'+s%60).slice(-2)}
-  function lerp(a,b,f){return a+(b-a)*f}
-  function sample(t){var c=D.clip,i=0;while(i<c.length-2&&c[i+1][0]<=t)i++;var A=c[i],B=c[i+1],f=Math.min(1,Math.max(0,(t-A[0])/((B[0]-A[0])||1)));
-    var dh=((B[2]-A[2]+540)%360)-180;return{d:lerp(A[1],B[1],f),h:(A[2]+dh*f+360)%360,m:A[5]}}
-  var cmk,cdot,omk,dmin,dmax;
-  function y1(d){return 12+(d-dmin)/(dmax-dmin)*118}
-  function build(){
-    var c=D.clip.filter(function(r){return r[0]>=0&&r[0]<=dur});
-    dmin=Math.floor(Math.min.apply(0,c.map(function(r){return r[1]}))-1);dmax=Math.ceil(Math.max.apply(0,c.map(function(r){return r[1]}))+1);
-    for(var g=0;g<=dur;g+=10){el('line',{x1:g/dur*1000,x2:g/dur*1000,y1:0,y2:150,class:'grid'},scrub)}
-    var pts=c.map(function(r){return (r[0]/dur*1000).toFixed(1)+','+y1(r[1]).toFixed(1)}).join(' ');
-    el('polygon',{points:'0,150 '+pts+' 1000,150',class:'area'},scrub);el('polyline',{points:pts,class:'line'},scrub);
-    [].forEach.call(document.querySelectorAll('.chapter'),function(b){var x=b.dataset.t/dur*1000;el('line',{x1:x,x2:x,y1:0,y2:150,class:'chap'},scrub)});
-    var t1=el('text',{x:6,y:16,class:'axis'},scrub);t1.textContent=(dmin*0.3048).toFixed(0)+' m';
-    var t2=el('text',{x:6,y:146,class:'axis'},scrub);t2.textContent=(dmax*0.3048).toFixed(0)+' m';
-    cmk=el('line',{x1:0,x2:0,y1:0,y2:150,class:'marker'},scrub);
-    var P=D.profile,T=P[P.length-1][0],pm=Math.max.apply(0,P.map(function(r){return r[1]}))*1.05;
-    function y2(d){return 4+d/pm*82}
-    for(var m=0;m<=T;m+=300){var x=m/T*1000;el('line',{x1:x,x2:x,y1:0,y2:90,class:'grid'},ov);if(m>0&&m<T-120){var tx=el('text',{x:x+4,y:86,class:'axis'},ov);tx.textContent=(m/60)+' min'}}
-    el('rect',{x:D.t0/T*1000,y:0,width:dur/T*1000,height:90,class:'band'},ov);
-    var op=P.map(function(r){return (r[0]/T*1000).toFixed(1)+','+y2(r[1]).toFixed(1)}).join(' ');
-    el('polygon',{points:'0,0 '+op+' 1000,0',class:'area'},ov);el('polyline',{points:op,class:'line'},ov);
-    omk=el('line',{x1:0,x2:0,y1:0,y2:90,class:'marker'},ov);ov._T=T;
-    update(0)}
-  function update(t){if(!D)return;var s=sample(t),m=s.d*0.3048;
-    $('h-m').textContent=m.toFixed(1);$('h-ft').textContent=Math.round(s.d);
-    var h=Math.round(s.h)%360;$('h-hdg').textContent=h;$('h-card').textContent=cards[Math.round(h/22.5)%16];
-    $('h-comp').setAttribute('transform','rotate('+h+')');
-    $('h-mode').textContent=s.m==='ALT_HOLD'?'Depth hold':s.m==='MANUAL'?'Manual':s.m==='STABILIZE'?'Stabilize':s.m;
-    var dt=D.t0+t;$('h-time').textContent=('0'+Math.floor(dt/60)).slice(-2)+':'+('0'+Math.floor(dt%60)).slice(-2);
-    var x=t/dur*1000;cmk.setAttribute('x1',x);cmk.setAttribute('x2',x);
-    var ox=(D.t0+t)/ov._T*1000;omk.setAttribute('x1',ox);omk.setAttribute('x2',ox);
-    $('scrub-read').textContent=fmt(t)+' / '+fmt(dur);
-    scrub.setAttribute('aria-valuenow',Math.round(t));scrub.setAttribute('aria-valuetext',fmt(t)+', depth '+m.toFixed(1)+' metres')}
-  var raf=0;function loop(){update(v.currentTime||0);raf=v.paused?0:requestAnimationFrame(loop)}
-  function seek(t){t=Math.max(0,Math.min(dur-0.05,t));if(v.preload==='none'){v.preload='auto';v.load()}
-    var go=function(){try{v.currentTime=t}catch(e){}update(t)};if(v.readyState>=1)go();else{v.addEventListener('loadedmetadata',go,{once:true});update(t)}}
-  function doPlay(){if(v.preload==='none'){v.preload='auto'}var p=v.play();if(p&&p.catch)p.catch(function(){})}
-  v.addEventListener('play',function(){play.textContent='Pause';play.setAttribute('aria-label','Pause the dive');if(!raf)raf=requestAnimationFrame(loop)});
-  v.addEventListener('pause',function(){play.textContent='Play';play.setAttribute('aria-label','Play the dive')});
-  v.addEventListener('ended',function(){v.currentTime=0;doPlay()});
-  v.addEventListener('seeked',function(){update(v.currentTime)});
-  play.addEventListener('click',function(){v.paused?doPlay():v.pause()});
-  v.addEventListener('click',function(){v.paused?doPlay():v.pause()});
-  [].forEach.call(document.querySelectorAll('.chapter'),function(b){b.addEventListener('click',function(){seek(+b.dataset.t);doPlay()})});
-  var drag=false,wasPlaying=false;
-  function tAt(e){var r=scrub.getBoundingClientRect();return (e.clientX-r.left)/r.width*dur}
-  scrub.addEventListener('pointerdown',function(e){drag=true;wasPlaying=!v.paused;v.pause();scrub.setPointerCapture(e.pointerId);seek(tAt(e))});
-  scrub.addEventListener('pointermove',function(e){if(drag)seek(tAt(e))});
-  scrub.addEventListener('pointerup',function(){drag=false;if(wasPlaying)doPlay()});
-  scrub.addEventListener('keydown',function(e){var t=v.currentTime||0,k=e.key;
-    if(k==='ArrowRight'||k==='ArrowUp'){seek(t+(e.shiftKey?10:2));e.preventDefault()}
-    else if(k==='ArrowLeft'||k==='ArrowDown'){seek(t-(e.shiftKey?10:2));e.preventDefault()}
-    else if(k==='Home'){seek(0);e.preventDefault()}else if(k==='End'){seek(dur-1);e.preventDefault()}
-    else if(k===' '||k==='Enter'){v.paused?doPlay():v.pause();e.preventDefault()}});
-  fetch('assets/data/dive-2026-11-20.json').then(function(r){return r.json()}).then(function(j){D=j;dur=j.dur;build()}).catch(function(){document.querySelector('.charts').hidden=true;document.querySelector('.hud').hidden=true});
-  if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){
-    if(e.isIntersecting){if(!reduce&&v.paused&&!v._touched){v._touched=1;doPlay()}}else if(!v.paused){v.pause()}})},{threshold:.5}).observe(v)}
-})();
-</script>
+<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/dive.js" defer></script>
 </body>
 </html>
