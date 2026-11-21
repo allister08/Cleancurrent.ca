@@ -337,3 +337,9 @@ footer .foot-legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap
 .lb-prev{left:16px;top:50%;transform:translateY(-50%)}
 .lb-next{right:16px;top:50%;transform:translateY(-50%)}
 @media (max-width:640px){.lb-prev,.lb-next{top:auto;bottom:20px;transform:none}}
+.shot a{position:relative}
+.shot .play{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(7,21,48,.72);border:2px solid #fff;transition:background .2s}
+.shot .play::after{content:"";position:absolute;left:22px;top:16px;border-style:solid;border-width:12px 0 12px 19px;border-color:transparent transparent transparent #fff}
+.shot a:hover .play{background:var(--orange-btn)}
+.lightbox video{max-width:min(92vw,1600px);max-height:82vh;border-radius:3px;background:#000}
+.lightbox [hidden]{display:none}
