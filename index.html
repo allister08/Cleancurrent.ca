@@ -49,6 +49,7 @@
     (function(){
       // A different dive clip each day. Add new clips to the end of this list.
       var clips=[
+        ['hero-fish-close','hero-fish-close','A school of fish swimming past the ROV, November 24, 2026'],
         ['hero-reel','hero-poster','A school of fish at 20 m, November 20, 2026'],
         ['hero-reef','hero-reef','Pink coralline reef, November 20, 2026'],
         ['hero-lobster','hero-lobster','A lobster on the bottom, November 2026'],
@@ -57,8 +58,8 @@
         ['hero-catfish','hero-catfish','A catfish in Chocolate Lake, November 5, 2026'],
         ['hero-trap','hero-trap','A lost trap found during a cleanup, October 2026']
       ];
-      var d=new Date(),day=Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5);
-      var q=location.search.match(/[?&]hero=(\d+)/),c=clips[q?(+q[1])%clips.length:day%clips.length];
+      var d=new Date(),day=Math.floor((Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())-Date.UTC(2026,10,24))/864e5);
+      var q=location.search.match(/[?&]hero=(\d+)/),c=clips[q?(+q[1])%clips.length:((day%clips.length)+clips.length)%clips.length];
       var v=document.getElementById('hero-video'),img='/assets/img/'+c[1]+'.jpg';
       document.getElementById('hero-poster').src=img;v.poster=img;
       document.getElementById('hero-label').textContent=c[2];
