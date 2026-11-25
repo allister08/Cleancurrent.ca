@@ -42,11 +42,29 @@
 </header>
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
-    <img class="poster" src="/assets/img/hero-poster.jpg" alt="" aria-hidden="true">
-    <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="/assets/img/hero-poster.jpg" aria-hidden="true">
-      <source src="/assets/video/hero-reel.mp4" type="video/mp4">
-    </video>
-    <span class="label">A school of fish at 20 m, November 20, 2026</span>
+    <img class="poster" id="hero-poster" src="/assets/img/hero-poster.jpg" alt="" aria-hidden="true">
+    <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="/assets/img/hero-poster.jpg" aria-hidden="true"></video>
+    <span class="label" id="hero-label">A school of fish at 20 m, November 20, 2026</span>
+    <script>
+    (function(){
+      // A different dive clip each day. Add new clips to the end of this list.
+      var clips=[
+        ['hero-reel','hero-poster','A school of fish at 20 m, November 20, 2026'],
+        ['hero-reef','hero-reef','Pink coralline reef, November 20, 2026'],
+        ['hero-lobster','hero-lobster','A lobster on the bottom, November 2026'],
+        ['hero-chain','hero-chain','Inspecting a mooring chain, October 2026'],
+        ['hero-sculpin','hero-sculpin','A sculpin on red seaweed, November 20, 2026'],
+        ['hero-catfish','hero-catfish','A catfish in Chocolate Lake, November 5, 2026'],
+        ['hero-trap','hero-trap','A lost trap found during a cleanup, October 2026']
+      ];
+      var d=new Date(),day=Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5);
+      var q=location.search.match(/[?&]hero=(\d+)/),c=clips[q?(+q[1])%clips.length:day%clips.length];
+      var v=document.getElementById('hero-video'),img='/assets/img/'+c[1]+'.jpg';
+      document.getElementById('hero-poster').src=img;v.poster=img;
+      document.getElementById('hero-label').textContent=c[2];
+      v.src='/assets/video/'+c[0]+'.mp4';
+    })();
+    </script>
     <div class="wrap">
       <h1 id="hero-title">Underwater video of your hull, mooring or wharf.</h1>
       <p>We're Allister and Brent. We run an underwater ROV out of Halifax and Dartmouth, film what's down there, and send you the footage with a short write-up.</p>
